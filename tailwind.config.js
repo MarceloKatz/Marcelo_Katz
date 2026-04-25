@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         ink: "#1a1a1a",
         paper: "#fafaf7",
-        accent: "#d97706",
+        accent: "#6d28d9",
         muted: "#6b6b6b",
       },
       maxWidth: {
