@@ -1,56 +1,62 @@
-
 import Image from "next/image";
 import { HOME, SITE } from "@/lib/content";
 
 export default function HomePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* SECCIÓN SUPERIOR: Imagen y Cabecera lateral */}
-      <div className="flex flex-col lg:flex-row gap-8 items-start mb-12">
-        <div className="relative w-full lg:w-[55%] aspect-[4/5]">
+      {/* SECCIÓN SUPERIOR: Imagen y Cabecera */}
+      <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start mb-16">
+        <div className="relative w-full lg:w-[50%] aspect-[4/5]">
           <Image
             src={HOME.heroImage}
             alt="Marcelo Katz"
             fill
-            sizes="(max-width: 1024px) 100vw, 55vw"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
             priority
           />
         </div>
 
-        <div className="flex-1 flex flex-col items-center text-center space-y-6 pt-4">
-          <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
-            <strong>KATZ:</strong>{" "}Empatía-Clown-Máscaras- Bufón- Oratoria-Teatro {"-"} Coaching.
+        {/* Bloque de texto derecho ajustado a la imagen */}
+        <div className="flex-1 flex flex-col items-center text-center space-y-8 pt-6">
+          {/* Título: Solo KATZ en negrita, el resto normal */}
+          <h1 className="text-xl sm:text-2xl font-normal leading-relaxed text-gray-900">
+            <span className="font-bold">KATZ:</span> Empatía-Clown-Máscaras- Bufón- Oratoria- Teatro – Coaching.
           </h1>
 
-          <p className="text-base leading-relaxed">
+          {/* Párrafo de intro: Más ligero y con buen aire */}
+          <p className="text-lg sm:text-xl font-light leading-relaxed text-gray-800 max-w-md">
             {HOME.intro}
           </p>
 
+          {/* Botón: Color exacto y estilo */}
           <a
             href={SITE.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-accent text-white px-8 py-3 text-sm font-medium tracking-wider hover:opacity-90 transition-opacity"
+            className="inline-block bg-[#7B61FF] text-white px-10 py-4 text-xs font-bold tracking-[0.2em] rounded-sm hover:bg-[#6a52e6] transition-colors uppercase"
           >
             ESCRIBIME!!
           </a>
         </div>
       </div>
 
-      {/* SECCIÓN INFERIOR: Texto a ancho completo (Debajo de la foto) */}
-      <div className="w-full space-y-6">
-        <div className="space-y-4">
+      {/* SECCIÓN INFERIOR: Texto a ancho completo */}
+      <div className="w-full space-y-8">
+        <div className="space-y-6">
           {HOME.paragraphs.map((p, i) => (
-            <p key={i} className="text-center text-base lg:text-lg max-w-4xl mx-auto leading-relaxed">
+            <p key={i} className="text-center text-lg font-light text-gray-800 max-w-4xl mx-auto leading-relaxed">
               {p}
             </p>
           ))}
         </div>
 
-        <p className="text-xs sm:text-sm font-bold tracking-widest leading-loose pt-8 text-center uppercase border-t border-gray-100 mt-8">
-          {HOME.keywords}
-        </p>
+        {/* Keywords finales */}
+        <div className="pt-12">
+          <p className="text-xs sm:text-sm font-bold tracking-[0.25em] leading-loose text-center uppercase border-t border-gray-100 pt-8 text-gray-900">
+            {HOME.keywords}
+          </p>
+        </div>
       </div>
     </div>
   );
