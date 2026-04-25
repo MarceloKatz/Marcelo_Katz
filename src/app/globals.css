@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+.prose-mk p {
+  @apply mb-4 leading-relaxed text-ink/85;
+}
+
+.prose-mk strong {
+  @apply font-semibold text-ink;
+}
+
+.prose-mk a {
+  @apply text-accent hover:text-ink underline underline-offset-4 decoration-accent/40;
+}
