@@ -44,7 +44,7 @@ export const HOME = {
     "Como coach trabajo con profesionales, políticos y empresarios sobre escuchatoria, contacto, oratoria, eficiencia en las relaciones y felicidad laboral y personal.",
   ],
   keywords:
-    "EMPATÍA — CONTACTO — EMOCIÓN — CUERPO — PASIÓN — RISA — IMPULSO — DISPONIBILIDAD — PRESENTE — VACÍO — ESCUCHA — INTENSIDAD — URGENCIA — CALMA",
+    "EMPATÍA-CONTACTO-EMOCIÓN-CUERPO-PASIÓN-RISA-IMPULSO-DISPONIBILIDAD-PRESENTE-VACÍO-ESCUCHA-INTENSIDAD-URGENCIA-CALMA",
 };
 
 // DOCENCIA ------------------------------------------------------------------
