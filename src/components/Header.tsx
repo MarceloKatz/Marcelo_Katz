@@ -4,8 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { NAV_ITEMS, SITE } from "@/lib/content";
-// Si usas lucide-react para los iconos, si no, abajo puse los SVG directos
-import { Instagram, Facebook, Linkedin } from "lucide-react";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -15,64 +13,66 @@ export function Header() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           
-          {/* LOGO */}
+          {/* LOGO - Izquierda */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
               src={SITE.logo}
               alt={SITE.name}
               width={160}
               height={60}
-              className="h-14 w-auto"
+              className="h-12 sm:h-14 w-auto"
               priority
             />
           </Link>
 
-          {/* DESKTOP NAV + SOCIALS */}
-          <div className="hidden lg:flex items-center gap-8">
-            <nav className="flex items-center gap-5">
+          {/* NAV + SOCIALS - Derecha (Desktop) */}
+          <div className="hidden lg:flex items-center gap-10">
+            <nav className="flex items-center gap-6">
               {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-[11px] font-bold tracking-[0.15em] text-black hover:text-accent transition-colors uppercase"
+                  className="text-[11px] font-bold tracking-[0.18em] text-black hover:opacity-60 transition-opacity uppercase"
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
 
-            {/* SOCIAL ICONS */}
-            <div className="flex items-center gap-4 ml-4 border-l border-gray-200 pl-6">
-              <a href="#" className="text-black hover:opacity-70 transition-opacity">
-                <Instagram size={18} strokeWidth={2.5} />
+            {/* ICONOS SOCIALES - SVGs Directos (Sin librerías externas) */}
+            <div className="flex items-center gap-4">
+              {/* Instagram */}
+              <a href="#" className="text-black hover:opacity-60 transition-opacity">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
               </a>
-              <a href="#" className="text-black hover:opacity-70 transition-opacity">
-                <Facebook size={18} fill="currentColor" />
+              {/* Facebook */}
+              <a href="#" className="text-black hover:opacity-60 transition-opacity">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
-              <a href="#" className="text-black hover:opacity-70 transition-opacity">
-                <Linkedin size={18} fill="currentColor" />
+              {/* LinkedIn */}
+              <a href="#" className="text-black hover:opacity-60 transition-opacity">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
             </div>
           </div>
 
-          {/* MOBILE TOGGLE */}
+          {/* BOTÓN MÓVIL */}
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Abrir menú"
             className="lg:hidden p-2"
           >
             <div className="space-y-1.5">
-              <span className={`block w-6 h-0.5 bg-black transition-transform ${open ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block w-6 h-0.5 bg-black transition-all ${open ? 'rotate-45 translate-y-2' : ''}`} />
               <span className={`block w-6 h-0.5 bg-black ${open ? 'opacity-0' : ''}`} />
-              <span className={`block w-6 h-0.5 bg-black transition-transform ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span className={`block w-6 h-0.5 bg-black transition-all ${open ? '-rotate-45 -translate-y-2' : ''}`} />
             </div>
           </button>
         </div>
 
-        {/* MOBILE NAV */}
+        {/* MENÚ MÓVIL */}
         {open && (
-          <nav className="lg:hidden pb-8 flex flex-col gap-4 border-t border-gray-50 pt-6">
+          <nav className="lg:hidden pb-10 flex flex-col gap-5 border-t border-gray-50 pt-8 animate-in fade-in slide-in-from-top-4">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
@@ -83,11 +83,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="flex gap-6 pt-4 border-t border-gray-50">
-                <Instagram size={20} />
-                <Facebook size={20} />
-                <Linkedin size={20} />
-            </div>
           </nav>
         )}
       </div>
