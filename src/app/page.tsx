@@ -3,25 +3,25 @@ import { HOME, SITE } from "@/lib/content";
 
 export default function HomePage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
-        <div className="relative aspect-[4/5] w-full">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="flex flex-col lg:flex-row gap-8 items-start">
+        <div className="relative w-full lg:w-[55%] aspect-[4/5]">
           <Image
             src={HOME.heroImage}
             alt="Marcelo Katz"
             fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
+            sizes="(max-width: 1024px) 100vw, 55vw"
             className="object-cover"
             priority
           />
         </div>
 
-        <div className="space-y-6">
-          <h1 className="text-3xl sm:text-4xl font-display leading-tight">
-            <strong className="text-accent">KATZ:</strong> Empatía · Clown · Máscaras · Bufón · Oratoria · Teatro · Coaching.
+        <div className="flex-1 flex flex-col items-center text-center space-y-6 pt-4">
+          <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-center">
+            <strong>KATZ:</strong>{"  "}Empatía-Clown-Máscaras- Bufón- Oratoria-Teatro {"-"} Coaching.
           </h1>
 
-          <p className="text-lg text-ink/80 leading-relaxed font-display italic">
+          <p className="text-base leading-relaxed text-center">
             {HOME.intro}
           </p>
 
@@ -29,18 +29,18 @@ export default function HomePage() {
             href={SITE.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-accent text-paper px-8 py-3 text-sm font-medium tracking-wider hover:bg-ink transition-colors"
+            className="inline-block bg-accent text-white px-8 py-3 text-sm font-medium tracking-wider hover:opacity-90 transition-opacity"
           >
-            ESCRIBIME
+            ESCRIBIME!!
           </a>
 
-          <div className="prose-mk pt-6 border-t border-ink/10">
+          <div className="w-full pt-4 space-y-4">
             {HOME.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p key={i} className="text-center">{p}</p>
             ))}
           </div>
 
-          <p className="text-xs sm:text-sm font-medium tracking-widest text-ink/60 leading-loose pt-6 border-t border-ink/10">
+          <p className="text-xs sm:text-sm font-bold tracking-widest leading-loose pt-4 text-center uppercase">
             {HOME.keywords}
           </p>
         </div>
