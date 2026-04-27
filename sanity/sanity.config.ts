@@ -6,8 +6,8 @@ import { schemaTypes } from "./schemas";
 export default defineConfig({
   name: "marcelo-katz",
   title: "Marcelo Katz — CMS",
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || "",
-  dataset: process.env.SANITY_STUDIO_DATASET || "production",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "t4826x8q",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   plugins: [structureTool(), visionTool()],
   schema: { types: schemaTypes },
 });

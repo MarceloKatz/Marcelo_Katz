@@ -1,9 +1,29 @@
 import Image from "next/image";
 import { PRENSA } from "@/lib/content";
+import { sanityClient, urlFor } from "@/lib/sanity";
 
 export const metadata = { title: "Prensa" };
 
-export default function PrensaPage() {
+// Prevent static generation caching issues when empty sanity
+export const revalidate = 60;
+
+export default async function PrensaPage() {
+  const query = `*[_type == "prensaItem"] | order(order asc, publishedAt desc)`;
+  let sanityPrensa = [];
+  try {
+    sanityPrensa = await sanityClient.fetch(query);
+  } catch (error) {
+    console.error("Error fetching from Sanity:", error);
+  }
+
+  const items = sanityPrensa.length > 0
+    ? sanityPrensa.map((doc: any) => ({
+        title: doc.title,
+        href: doc.href,
+        image: doc.image ? urlFor(doc.image).url() : "",
+      }))
+    : PRENSA;
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       <header className="text-center">
@@ -12,22 +32,24 @@ export default function PrensaPage() {
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {PRENSA.map((item) => (
+        {items.map((item: any, index: number) => (
           <a
-            key={item.href}
-            href={item.href}
+            key={item.href || index}
+            href={item.href || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="group space-y-3"
+            className="group space-y-3 block"
           >
             <div className="relative aspect-[3/4] overflow-hidden bg-ink/5">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              {item.image && (
+                <Image
+                  src={item.image}
+                  alt={item.title || "Nota de prensa"}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              )}
             </div>
             <h3 className="text-sm font-medium text-ink/80 group-hover:text-accent transition-colors">
               {item.title}

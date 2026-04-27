@@ -7,4 +7,12 @@ export const sanityConfig = {
   useCdn: true,
 };
 
+import imageUrlBuilder from "@sanity/image-url";
+
 export const sanityClient = createClient(sanityConfig);
+
+const builder = imageUrlBuilder(sanityClient);
+
+export function urlFor(source: any) {
+  return builder.image(source);
+}
