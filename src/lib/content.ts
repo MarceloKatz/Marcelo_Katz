@@ -269,15 +269,24 @@ export const EVENTOS = {
 export const AGENDA = {
   funciones: [
     {
-      mes: "MARZO",
+      mes: "JUNIO",
       eventos: [
-        "Jueves 20, Carlos Paz (Argentina) — Gaspet.",
-        "Viernes 21 al domingo 23, Ciudad de Córdoba (Argentina) — Gaspet.",
+        "Sábado 20 (Estreno) a las 19h, Teatro Del Pueblo (Lavalle 3636) — VACA MUERTA.",
+        "Sábado 27 a las 19h, Teatro Del Pueblo (Lavalle 3636) — VACA MUERTA.",
+      ],
+    },
+    {
+      mes: "JULIO",
+      eventos: [
+        "Sábados a las 19h, Teatro Del Pueblo (Lavalle 3636) — VACA MUERTA.",
       ],
     },
     {
       mes: "AGOSTO",
-      eventos: ["Viernes 15 a domingo 17, Puerto Madryn (Argentina) — Gaspet."],
+      eventos: [
+        "Sábados a las 19h, Teatro Del Pueblo (Lavalle 3636) — VACA MUERTA.",
+        "Viernes 15 a domingo 17, Puerto Madryn (Argentina) — Gaspet.",
+      ],
     },
     {
       mes: "SEPTIEMBRE",
