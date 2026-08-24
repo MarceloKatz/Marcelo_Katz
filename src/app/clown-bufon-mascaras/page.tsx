@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { ContactForm } from "@/components/ContactForm";
 
 const WHATSAPP_LINK = "https://wa.me/5491136317717?text=Hola!%20Me%20interesa%20obtener%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20Clown,%20Buf%C3%B3n%20y%20M%C3%A1scaras";
 
@@ -11,9 +11,9 @@ export const metadata = {
 export default function LandingClownPage() {
   return (
     <div className="bg-white min-h-screen">
-      {/* HERO BANNER A PANTALLA COMPLETA */}
-      <section className="relative bg-black text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
+      {/* HERO BANNER 2 COLUMNAS: TEXTO IZQUIERDA | FORMULARIO DERECHA */}
+      <section className="relative bg-black text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 opacity-35">
           <Image
             src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg"
             alt="Clown y Bufón Marcelo Katz"
@@ -22,31 +22,34 @@ export default function LandingClownPage() {
             className="object-cover object-center"
           />
         </div>
-        <div className="relative max-w-4xl mx-auto text-center space-y-6">
-          <span className="inline-block bg-[#7B61FF] text-white text-xs font-bold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full shadow-lg">
-            Entrenamientos Escénicos 2026
-          </span>
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight uppercase">
-            TALLERES DE CLOWN, BUFÓN Y MÁSCARAS
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-200 font-light max-w-2xl mx-auto">
-            Presenciales y online para amateurs y profesionales. Descubrí la potencia del juego, el humor físico y la presencia escénica.
-          </p>
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white text-sm font-bold tracking-wider px-8 py-4 rounded-xl transition-all shadow-xl hover:scale-105 w-full sm:w-auto text-center flex items-center justify-center gap-2"
-            >
-              💬 Consultar Fechas por WhatsApp
-            </a>
-            <Link
-              href="/agenda"
-              className="bg-white/10 hover:bg-white/20 text-white text-sm font-bold tracking-wider px-8 py-4 rounded-xl border border-white/20 transition-all w-full sm:w-auto text-center"
-            >
-              Ver Agenda Pública
-            </Link>
+
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* COLUMNA IZQUIERDA: TEXTO Y BOTÓN WHATSAPP */}
+          <div className="space-y-6 text-left">
+            <span className="inline-block bg-[#7B61FF] text-white text-xs font-bold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full shadow-lg">
+              Entrenamientos Escénicos 2026
+            </span>
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight uppercase">
+              TALLERES DE CLOWN, BUFÓN Y MÁSCARAS
+            </h1>
+            <p className="text-base sm:text-xl text-gray-200 font-light leading-relaxed">
+              Presenciales y online para amateurs y profesionales. Descubrí la potencia del juego, el humor físico y la presencia escénica.
+            </p>
+            <div className="pt-2">
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white text-sm font-bold tracking-wider px-8 py-4 rounded-xl transition-all shadow-xl hover:scale-105"
+              >
+                💬 Consultar Fechas por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          {/* COLUMNA DERECHA: FORMULARIO DIRECTO */}
+          <div className="w-full">
+            <ContactForm />
           </div>
         </div>
       </section>
