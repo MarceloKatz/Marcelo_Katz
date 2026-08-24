@@ -1,37 +1,36 @@
-import { AGENDA } from "@/lib/content";
+import fs from "fs";
+import path from "path";
+import AgendaManager, { AgendaData } from "@/components/AgendaManager";
 
-export const metadata = { title: "Agenda" };
+export const metadata = { title: "Agenda de Funciones y Entrenamientos" };
 
-type Section = { mes: string; eventos: string[] };
-
-function AgendaList({ title, items }: { title: string; items: Section[] }) {
-  return (
-    <section className="space-y-6">
-      <h2 className="text-2xl text-center pb-3 border-b border-ink/20">{title}</h2>
-      <div className="space-y-8">
-        {items.map((s) => (
-          <div key={s.mes} className="grid md:grid-cols-[120px_1fr] gap-4">
-            <h3 className="text-accent font-medium tracking-widest text-sm">{s.mes}</h3>
-            <ul className="space-y-2 text-ink/85">
-              {s.eventos.map((e, i) => (
-                <li key={i} className="leading-relaxed">{e}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+function getInitialAgendaData(): AgendaData {
+  try {
+    const filePath = path.join(process.cwd(), "src", "data", "agenda.json");
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, "utf8");
+      return JSON.parse(raw);
+    }
+  } catch (error) {
+    console.error("Error reading agenda data server side:", error);
+  }
+  return { funciones: [], entrenamientos: [] };
 }
 
 export default function AgendaPage() {
+  const initialData = getInitialAgendaData();
+
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       <header className="text-center">
-        <h1 className="text-4xl">AGENDA</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-wider text-gray-900 uppercase">
+          AGENDA DE FUNCIONES Y ENTRENAMIENTOS
+        </h1>
       </header>
-      <AgendaList title="FUNCIONES" items={AGENDA.funciones} />
-      <AgendaList title="ENTRENAMIENTOS" items={AGENDA.entrenamientos} />
+
+      {/* COMPONENTE INTERACTIVO DE AGENDA Y EDICIÓN EN VIVO */}
+      <AgendaManager initialData={initialData} />
     </div>
   );
 }
+

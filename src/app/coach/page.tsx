@@ -1,54 +1,63 @@
-import Image from "next/image";
-import { COACH } from "@/lib/content";
+import CoachTabs from "@/components/CoachTabs";
 
-export const metadata = { title: "Coach" };
+const COACH = {
+  title: "Personas y Organizaciones",
+  intro:
+    "Un método distinto para un viejo objetivo: comunicarse mejor. El cuerpo, la escucha, la palabra, el presente, el ritmo, la respiración y el uso del abanico de colores que habitan en uno. La precisión y la espontaneidad. Un método propio en el que vuelco la experiencia obtenida desde 1980, actuando y dirigiendo en escenarios nacionales e internacionales, y enseñando en Argentina, USA, Francia, España, Italia, Suiza, Dinamarca, Portugal, Chile, México, Uruguay y en mi escuela en Buenos Aires por la que han pasado más de 4000 alumnos amateurs y profesionales. Un entrenamiento sobre eficiencia en las relaciones, la oratoria, la empatía, y la felicidad laboral y personal.",
+  clients:
+    "Entrené a destacados científicos, empresarios y políticos como Martín Lousteau y Marco Lavagna, entre otros.",
+  images: [
+    "/images/coach/coach-1.jpg",
+    "/images/coach/coach-2.jpg",
+  ],
+  benefits: {
+    title: "Qué permite el entrenamiento",
+    items: [
+      "Aprender a captar y sostener el interés del auditorio o los interlocutores. Evitar aburrir y adaptarse a las reacciones del auditorio.",
+      "Comprender la influencia del lenguaje corporal. Trabajar con el cuerpo y la mirada para tener una comunicación expresiva que modifique al auditorio y a los interlocutores.",
+      "Aceptar quiénes somos y, desde nuestra esencia y personalidad, conectar con nuestros interlocutores.",
+      "Aprender a planificar y preparar una presentación oral para que los conceptos a transmitir lleguen con efectividad.",
+      "Aprender a armar las exposiciones, combinando partes preparadas y otras improvisadas sobre ideas preconcebidas.",
+      "Trabajar el miedo escénico y la desinhibición. La respiración. Los imprevistos.",
+      "Aprender a prepararse para la exposición. Los minutos previos a enfrentar al público.",
+    ],
+  },
+  testimonials: [
+    {
+      author: "Matías Tombolini",
+      role: "Vicepresidente del Banco Nación",
+      quote:
+        "Experiencia inigualable y diferente a todo lo que conocía. Me dio herramientas innovadoras para enfrentar audiencias diversas. Cada sesión fue una coctelera de emociones inesperadas que me permitieron abordar nuevas perspectivas y estrategias.",
+    },
+    {
+      author: "Valeria Fernández",
+      role: "Gerenta de Marketing de Motorola",
+      quote:
+        "Me sorprendió lo novedoso del enfoque. Me abrió nuevas posibilidades profesionales e incluso desbordó lo laboral. Una experiencia sumamente gratificante.",
+    },
+    {
+      author: "Viviana Schilkrut",
+      role: "Consultora en Recursos Humanos",
+      quote:
+        "Marcelo posee una lectura e interpretación de la corporalidad impresionantes. He visto a distintos directores y gerentes profundizar su expresividad y emocionalidad en la interacción con otras personas. Una experiencia muy enriquecedora.",
+    },
+  ],
+};
+
+export const metadata = { title: "Personas y Organizaciones" };
 
 export default function CoachPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       <header className="text-center max-w-prose mx-auto">
-        <h1 className="text-3xl sm:text-4xl mb-6">{COACH.title}</h1>
+        <h1 className="text-3xl sm:text-4xl mb-4 font-bold tracking-wider text-gray-900 uppercase">
+          {COACH.title}
+        </h1>
       </header>
 
-      <section className="prose-mk max-w-prose mx-auto">
-        <p>{COACH.intro}</p>
-        <p>{COACH.clients}</p>
-      </section>
-
-      <section className="grid sm:grid-cols-3 gap-4">
-        {COACH.images.map((src, i) => (
-          <div key={i} className="relative aspect-[4/3]">
-            <Image src={src} alt={`Entrenamiento ${i + 1}`} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
-          </div>
-        ))}
-      </section>
-
-      <section className="max-w-prose mx-auto">
-        <h2 className="text-2xl mb-6 text-center">{COACH.benefits.title}</h2>
-        <ul className="space-y-4">
-          {COACH.benefits.items.map((item, i) => (
-            <li key={i} className="flex gap-3 text-ink/85 leading-relaxed">
-              <span className="text-accent shrink-0 mt-1">▸</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="text-2xl text-center mb-8">Algunas opiniones sobre el entrenamiento</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {COACH.testimonials.map((t) => (
-            <blockquote key={t.author} className="bg-ink/5 p-6 space-y-4">
-              <p className="text-sm italic text-ink/85 leading-relaxed">“{t.quote}”</p>
-              <footer className="text-xs">
-                <p className="font-medium text-ink">{t.author}</p>
-                <p className="text-ink/60">{t.role}</p>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
+      {/* COMPONENTE CON LAS 2 SOLAPAS: Juego, salud y crecimiento / Expresividad y empatía */}
+      <CoachTabs expresividadData={COACH} />
     </div>
   );
 }
+

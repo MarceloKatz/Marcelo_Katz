@@ -12,8 +12,7 @@ export const NAV_ITEMS = [
   { label: "DOCENCIA", href: "/docencia" },
   { label: "ESPACIO AGUIRRE", href: "/espacio-aguirre" },
   { label: "ESPECTÁCULOS", href: "/espectaculos" },
-  { label: "COACH", href: "/coach" },
-  { label: "EVENTOS", href: "/eventos" },
+  { label: "PERSONAS Y ORGANIZACIONES", href: "/coach" },
   { label: "AGENDA", href: "/agenda" },
   { label: "BIO", href: "/bio" },
   { label: "PRENSA", href: "/prensa" },
@@ -65,32 +64,7 @@ export const DOCENCIA = {
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-4-DOCENCIA.jpg",
     },
   ],
-  schedules: [
-    {
-      title: "Entrenamientos Presenciales en Buenos Aires",
-      items: [
-        "Esquema 1: Sábado + domingo. (Total: 14/16 hs)",
-        "Esquema 2: Viernes noche + sábado + domingo. (Total: 18 hs)",
-        "Esquema 3: Quincenal. 3 días de semana de 3 hs diarias. (Total: 18 hs)",
-        "Esquema 4: Quincenal o mensual. 8 días de semana de 3 hs diarias. (Total: 24 hs)",
-      ],
-    },
-    {
-      title: "Entrenamientos en otras ciudades de Latinoamérica, Europa y Estados Unidos",
-      items: [
-        "Esquema 1: Sábado + domingo. (Total: 14/16 hs)",
-        "Esquema 2: Viernes noche + sábado + domingo. (Total: 18 hs)",
-        "Esquema 3: 4 días de semana de 4 hs diarias. (Total: 16 hs)",
-      ],
-    },
-    {
-      title: "Entrenamientos on line",
-      items: [
-        "6 semanas. 1 clase semanal de 3 hs. (Total: 18 hs).",
-        "Alumnos con y sin experiencia, de cualquier parte del mundo.",
-      ],
-    },
-  ],
+  schedules: [],
   trainings: [
     {
       title: "Entrenamiento de Clown",
@@ -105,10 +79,6 @@ export const DOCENCIA = {
       title: "Entrenamiento de Máscaras",
       body: "Un viaje sorprendente para descubrir otros personajes y otros cuerpos que habitan en uno. Un entrenamiento meticuloso para encontrar el cuerpo adecuado para cada máscara que se utiliza. Implica encontrar la unidad de ese nuevo rostro (la máscara) con el cuerpo, las dinámicas de movimiento y la personalidad que de ahí resulta y da vida al nuevo personaje.",
     },
-    {
-      title: "Entrenamiento para Actores y actrices profesionales con y sin experiencia en las técnicas de Clown, Bufón y Máscaras",
-      body: "Un entrenamiento presencial. 3 hs a la semana. Miércoles 10 a 13 hs en Espacio Aguirre, Buenos Aires. Una investigación profunda sobre el cuerpo actoral. Ritmo, impulsos, péndulo, estados, fonación, presente, contacto, urgencia-paciencia, reacción, quiebres, emoción, risa.",
-    },
   ],
   interview: { label: "Entrevista a M. Katz", url: "https://www.youtube.com/watch?v=hYzYAIZSAio" },
   gallery: [
@@ -116,17 +86,17 @@ export const DOCENCIA = {
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-6-docencia.-Barcelona-2018-1.jpg", caption: "Barcelona 2018" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-7-docencia.-Clase-Magistral-en-Espacio-Aguirre.jpg", caption: "Clase Magistral en Espacio Aguirre 2013" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-docencia.-Mar-del-Plata-2019.jpg", caption: "Mar del Plata 2019" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-docencia.-Arrigorriaga-España-2014.jpg", caption: "Arrigorriaga, España 2014" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-10-docencia.-Durango-España-2008.jpg", caption: "Durango, España 2008" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-docencia.-Arrigorriaga-España-2014.jpg", caption: "Arrigorriaga, España 2014" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-10-docencia.-Durango-España-2008.jpg", caption: "Durango, España 2008" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-11-docencia.-Pamplona-2016.jpg", caption: "Pamplona 2016" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-12-docencia.-Logroño-España-2013.jpg", caption: "Logroño, España 2013" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-13-docencia.-Vitoria-España-2018.jpeg", caption: "Vitoria, España 2018" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-12-docencia.-Logroño-España-2013.jpg", caption: "Logroño, España 2013" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-13-docencia.-Vitoria-España-2018.jpeg", caption: "Vitoria, España 2018" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-14-docencia.-Santiago-de-Chile-2019.jpg", caption: "Santiago de Chile 2019" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/CELCIT-2016.jpeg", caption: "CELCIT 2016" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-16-docencia.-Parma-Italia-2016.jpg", caption: "Parma, Italia 2016" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-17-docencia.-Zaragoza-2015.jpg", caption: "Zaragoza 2015" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/bariloche-2017.jpeg", caption: "Bariloche 2017" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Córdoba-2011.jpeg", caption: "Córdoba 2011" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Córdoba-2011.jpeg", caption: "Córdoba 2011" },
     { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Universidad-de-Buenos-Aires.-2012..jpg", caption: "Universidad de Buenos Aires 2012" },
   ],
 };
@@ -135,9 +105,10 @@ export const DOCENCIA = {
 export const ESPACIO_AGUIRRE = {
   heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/espacioAguirre.jpg",
   paragraphs: [
-    "Después de quince años de deambular con mis clases y espectáculos, a fines de 1999 concreté el sueño de un espacio propio. Una vieja fábrica de juguetes ubicada en el barrio de Villa Crespo, en Buenos Aires, se convirtió en un teatro y una escuela de clown, bufón y máscaras.",
+    "Después de 15 años de deambular con mis clases y espectáculos, a fines de 1999 concreté el sueño de un espacio propio. Una vieja fábrica de juguetes ubicada en el barrio de Villa Crespo, en Buenos Aires, se convirtió en un teatro y una escuela de clown, bufón y máscaras.",
     "El teatro tiene capacidad para 100 espectadores. Aloja algunas de mis producciones, las de la escuela y producciones invitadas.",
-    "La escuela cuenta con un staff de 10 docentes, un coordinador pedagógico y mi dirección. Con ese equipo, a lo largo de más de 20 años, hemos creado una línea pedagógica única. Por las 3 salas de Espacio Aguirre han pasado más de 4000 alumnos argentinos y extranjeros, amateurs y profesionales que ingresaron a destacadas compañías nacionales e internacionales. Cada año unos 350 alumnos entrenan en los cursos anuales, divididos en 5 niveles de experiencia. Además de su entrenamiento comparten producciones de muestras y espectáculos, charlas, campamentos, encuentros con alumnos de otros grupos y una serie de actividades que generan una hermosa red de humanidad y docencia. Todo esto hace del pasaje por la escuela una experiencia vital y única.",
+    "La escuela cuenta con un staff de 10 docentes, un coordinador pedagógico y mi dirección. Con ese equipo a lo largo de más de 25 años hemos creado una línea pedagógica única. Por las 3 salas de Espacio Aguirre han pasado más de 4500 alumnos argentinos y extranjeros, amateurs y profesionales que ingresaron a destacadas compañías nacionales e internacionales.",
+    "Cada año unos 350 alumnos entrenan en los cursos anuales, divididos en 5 niveles de experiencia. Además de su entrenamiento comparten producciones de muestras y espectáculos, charlas, campamentos, encuentros con alumnos de otros grupos y una serie de actividades que generan una hermosa red de humanidad y docencia. Todo esto hace del pasaje por la escuela, una experiencia vital y única.",
     "Además de los cursos anuales, durante el año hay cursos intensivos.",
     "Decenas de profesores transmiten en Argentina y en Latinoamérica lo que han aprendido en Espacio Aguirre.",
   ],
@@ -156,7 +127,17 @@ export const ESPECTACULOS = {
   },
   intro: {
     title: "Algunos espectáculos de mi historia",
-    body: "La impronta de mis espectáculos tiene que ver con el humor y con el clima onírico visual. Los montajes abordan temáticas universales y, a la vez que divierten al espectador, lo introducen en un clima de ensoñación. Recibí diversos premios y nominaciones del medio teatral: Premios ACE (Críticos de Espectáculos), María Guerrero, Getea, Atina, Pregonero, Teatro XXI, entre otros. Estrené como director, en reconocidos teatros de Buenos Aires: Teatro Municipal General San Martín, Teatro Nacional Cervantes, C.C. Konex, C.C. de la Cooperación, Teatro Metropolitan, Regina, La Trastienda, C.C. Recoleta, entre otros. Mis espectáculos se vieron en Argentina, Uruguay, Chile, Perú, Colombia, España, Estados Unidos, Dinamarca, Israel y Francia.",
+    body: `La impronta de mis espectáculos nace del cruce entre el humor, el teatro físico y una fuerte búsqueda visual.
+
+A veces ese universo es poético y onírico; otras, feroz, desmesurado y satírico.
+
+Me interesa que la risa no sea un fin en sí mismo, sino una forma de mirar la realidad, abrir preguntas y generar una experiencia que permanezca en el espectador.
+
+Recibí diversos premios y nominaciones del medio teatral: Premios ACE (Críticos de Espectáculos), María Guerrero, Getea, Atina, Pregonero, Teatro XXI, entre otros.
+
+Estrené como director en reconocidos teatros de Buenos Aires: Teatro Municipal General San Martín, Teatro Nacional Cervantes, C.C. Konex, Centro Cultural de la Cooperación, Teatro Metropolitan, Teatro Regina, La Trastienda y Centro Cultural Recoleta, entre otros.
+
+Mis espectáculos se presentaron en Argentina, Uruguay, Chile, Perú, Colombia, España, Estados Unidos, Dinamarca y Francia.`,
   },
   // Las críticas son citas atribuidas a periodistas. Se mantienen como tal:
   // son testimonios de terceros sobre la obra de Marcelo y forman parte
@@ -170,8 +151,8 @@ export const ESPECTACULOS = {
     { source: "Mirada y Sentido", author: "Patricia Lanatta", quote: "Nuevamente el director Marcelo Katz nos asombra con su talento para enlazar lo cómico y lo onírico y genera cuadros fantásticos. Consigue que el espectador se espeje en ese sueño a través de escenas hilvanadas por la puntada del humor, seguida de la imagen poderosa. Hay belleza." },
   ],
   images: [
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-Espectáculos.-Los-fabulosos-singer-2013.jpeg", caption: "Los Fabulosos Singer (2013)" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-espectáculos.-Aguas-2008.jpg", caption: "Aguas (2008)" },
+    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-Espectáculos.-Los-fabulosos-singer-2013.jpeg", caption: "Los Fabulosos Singer (2013)" },
+    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-espectáculos.-Aguas-2008.jpg", caption: "Aguas (2008)" },
   ],
   awards: {
     title: "PREMIOS Y NOMINACIONES",
@@ -188,8 +169,8 @@ export const ESPECTACULOS = {
     title: "ACTOR",
     body: "Mi primera actuación profesional fue a los 18 años, en un espectáculo en homenaje a Kafka producido por la embajada de Austria en Argentina. A los 23 años fui seleccionado para integrar los elencos del Teatro Municipal General San Martín de Buenos Aires. Integré la compañía de Danza de Teresa Duggan y actué en espectáculos de circo, teatro y clown en Argentina y en varios países de América y Europa.",
     images: [
-      { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°11-ESPECTÁCULOS.-La-comedia-de-las-equivocaciones.-1988-692x1024.jpg", caption: "La comedia de las equivocaciones (1988)" },
-      { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°10-Espectáculos.-Elemental-2006.jpg", caption: "Elemental (2006)" },
+      { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°11-ESPECTÁCULOS.-La-comedia-de-las-equivocaciones.-1988-692x1024.jpg", caption: "La comedia de las equivocaciones (1988)" },
+      { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°10-Espectáculos.-Elemental-2006.jpg", caption: "Elemental (2006)" },
     ],
   },
   director: {
@@ -251,8 +232,8 @@ export const EVENTOS = {
   clients:
     "Unicenter, L'Oréal, Banco de Boston, Nokia, Petrobras, Siderca, América TV, Telefé, Abasto Shopping, Aysa, Gándara, Municipalidad de Buenos Aires, Secretaría de Cultura de la Nación, son parte de las empresas que han contratado mis servicios.",
   galleryTop: [
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°1-Dragón-de-luces.jpg", caption: "Dragón de luces" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°2-Acróbata-aérea..jpg", caption: "Acróbata aérea" },
+    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°1-Dragón-de-luces.jpg", caption: "Dragón de luces" },
+    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°2-Acróbata-aérea..jpg", caption: "Acróbata aérea" },
     { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°3-Swing-con-luces.jpg", caption: "Swing con luces" },
   ],
   galleryBottom: [

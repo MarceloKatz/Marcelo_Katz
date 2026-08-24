@@ -1,6 +1,59 @@
 import Image from "next/image";
 import Link from "next/link";
-import { DOCENCIA } from "@/lib/content";
+
+const DOCENCIA = {
+  title: "Entrenamientos para amateurs y profesionales",
+  subtitle: "Presenciales y on line.",
+  disciplines: [
+    {
+      label: "CLOWN",
+      image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg",
+    },
+    {
+      label: "BUFÓN",
+      image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_3-DOCENCIA.jpg",
+    },
+    {
+      label: "MÁSCARAS",
+      image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-4-DOCENCIA.jpg",
+    },
+  ],
+  schedules: [],
+  trainings: [
+    {
+      title: "Entrenamiento de Clown",
+      body: "Una experiencia apasionante, vigorizante, intensa, transformadora y divertida. Nos reencuentra con la potencia del juego y nos permite compartirlo con el público y los compañeros de escena. Nos anima a mostrar quiénes somos y a generar un vínculo profundo con el público. Cuerpo, presente, ritmo, vulnerabilidad, empatía, impulso, contacto, emoción, risa, autenticidad.",
+    },
+    {
+      title: "Entrenamiento de Bufón",
+      body: "El placer de transgredir y denunciar indagando en la monstruosidad y bestialidad que habita en nosotros. Los bufones se burlan de todo y de todos, poniendo de manifiesto la absurdidad de las instituciones y las relaciones humanas. Todo esto, buscando al mismo tiempo la comicidad. Un entrenamiento intenso sobre la búsqueda del cuerpo-bufón (monstruos, deformes, bestias, personajes fantásticos). El ritmo, la urgencia (y supervivencia escénica), los quiebres y el contacto con el público. Una indagación profunda y divertida de las temáticas de conflictiva de lo humano, que tocan a cada alumno.",
+      link: { label: "Video de entrenamiento de bufón", url: "https://www.youtube.com/watch?v=UuPba0ybilw" },
+    },
+    {
+      title: "Entrenamiento de Máscaras",
+      body: "Un viaje sorprendente para descubrir otros personajes y otros cuerpos que habitan en uno. Un entrenamiento meticuloso para encontrar el cuerpo adecuado para cada máscara que se utiliza. Implica encontrar la unidad de ese nuevo rostro (la máscara) con el cuerpo, las dinámicas de movimiento y la personalidad que de ahí resulta y da vida al nuevo personaje.",
+    },
+  ],
+  interview: { label: "Entrevista a M. Katz", url: "https://www.youtube.com/watch?v=hYzYAIZSAio" },
+  gallery: [
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-5-docencia.-Paris.-2016.jpg", caption: "Paris 2016" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-6-docencia.-Barcelona-2018-1.jpg", caption: "Barcelona 2018" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-7-docencia.-Clase-Magistral-en-Espacio-Aguirre.jpg", caption: "Clase Magistral en Espacio Aguirre 2013" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-docencia.-Mar-del-Plata-2019.jpg", caption: "Mar del Plata 2019" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-docencia.-Arrigorriaga-España-2014.jpg", caption: "Arrigorriaga, España 2014" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-10-docencia.-Durango-España-2008.jpg", caption: "Durango, España 2008" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-11-docencia.-Pamplona-2016.jpg", caption: "Pamplona 2016" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-12-docencia.-Logroño-España-2013.jpg", caption: "Logroño, España 2013" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-13-docencia.-Vitoria-España-2018.jpeg", caption: "Vitoria, España 2018" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-14-docencia.-Santiago-de-Chile-2019.jpg", caption: "Santiago de Chile 2019" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/CELCIT-2016.jpeg", caption: "CELCIT 2016" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-16-docencia.-Parma-Italia-2016.jpg", caption: "Parma, Italia 2016" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-17-docencia.-Zaragoza-2015.jpg", caption: "Zaragoza 2015" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/bariloche-2017.jpeg", caption: "Bariloche 2017" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Córdoba-2011.jpeg", caption: "Córdoba 2011" },
+    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Universidad-de-Buenos-Aires.-2012..jpg", caption: "Universidad de Buenos Aires 2012" },
+  ],
+};
 
 export const metadata = { title: "Docencia" };
 
@@ -57,64 +110,16 @@ export default function DocenciaPage() {
           ))}
         </section>
 
-        {/* Schedules Section */}
-        <section className="space-y-24 py-10 max-w-5xl mx-auto">
-          {DOCENCIA.schedules.map((s, idx) => (
-            <div key={s.title} className="text-center space-y-8">
-              <h2 className="text-xl sm:text-2xl tracking-[0.05em] font-bold text-ink">
-                {s.title}
-              </h2>
-              <div className="space-y-4 px-4 max-w-4xl mx-auto">
-                {s.items.reduce((acc: string[][], curr: string, i: number) => {
-                  if (i % 2 === 0) {
-                    acc.push([curr]);
-                  } else {
-                    acc[acc.length - 1].push(curr);
-                  }
-                  return acc;
-                }, [] as string[][]).map((pair: string[], i: number) => (
-                  <p key={i} className="text-sm sm:text-[15px] leading-relaxed text-ink/80 font-normal">
-                    {pair.map((item: string, j: number) => (
-                      <span key={j}>
-                        <span className="font-bold underline decoration-1 underline-offset-4">{item.split(":")[0]}:</span>
-                        {item.split(":")[1]}
-                        {j < pair.length - 1 && <span className="mx-2 text-ink/30 italic">/</span>}
-                      </span>
-                    ))}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
-        </section>
-
-        {/* Footer/Contact Info */}
-        <div className="text-center space-y-12 py-10 border-t border-ink/5">
-          <div className="space-y-6">
-            <Link 
-              href="/agenda" 
-              className="text-lg font-medium text-accent hover:text-accent/80 transition-colors"
-            >
-              Consultar fechas en <span className="font-bold underline">“Agenda”</span>.
-            </Link>
-            <p className="text-sm sm:text-lg font-bold text-ink">
-              Si precisás organizar un curso presencial u online con otro esquema diferente,{" "}
-              <Link href="/contacto" className="underline underline-offset-4 hover:text-accent transition-colors">
-                consultame
-              </Link>.
-            </p>
-          </div>
-          
-          <div className="pt-6">
-            <a
-              href={DOCENCIA.interview.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-accent text-white px-10 py-4 rounded-sm text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-accent/90 transition-all shadow-lg"
-            >
-              {DOCENCIA.interview.label}
-            </a>
-          </div>
+        {/* Interview Action */}
+        <div className="text-center py-6">
+          <a
+            href={DOCENCIA.interview.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-accent text-white px-10 py-4 rounded-sm text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-accent/90 transition-all shadow-lg"
+          >
+            {DOCENCIA.interview.label}
+          </a>
         </div>
 
         {/* Trainings Detail Section */}
