@@ -13,6 +13,11 @@ export type AgendaData = {
   entrenamientos: AgendaSection[];
 };
 
+interface AgendaManagerProps {
+  initialData: AgendaData;
+  isAdminPage?: boolean;
+}
+
 function renderEventText(text: string) {
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts = [];
