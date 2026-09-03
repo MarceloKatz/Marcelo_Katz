@@ -1,23 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-/**
- * Endpoint de contacto.
- *
- * TODO: conectar a un proveedor de email (recomiendo Resend).
- *   1. npm i resend
- *   2. RESEND_API_KEY en .env.local
- *   3. Reemplazar el bloque de abajo por:
- *
- *      import { Resend } from "resend";
- *      const resend = new Resend(process.env.RESEND_API_KEY);
- *      await resend.emails.send({
- *        from: "web@marcelokatz.com.ar",
- *        to: process.env.CONTACT_EMAIL_TO!,
- *        subject: `[Web] ${subject || "Mensaje de contacto"}`,
- *        replyTo: email,
- *        text: `De: ${name} <${email}>\n\n${message}`,
- *      });
- */
 export async function POST(req: NextRequest) {
   try {
     const { name, email, subject, message } = await req.json();
@@ -29,8 +11,29 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Por ahora solo logueamos. Cuando se conecte Resend, esto sale.
-    console.log("[contacto]", { name, email, subject, message });
+    const recipient = process.env.CONTACT_EMAIL_TO || "mkatz6951@gmail.com";
+
+    // Enviar directamente a mkatz6951@gmail.com vía FormSubmit service
+    try {
+      await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[Web Marcelo Katz] Consulta de: ${name} (${subject || "General"})`,
+          Nombre: name,
+          Email: email,
+          Asunto: subject || "Consulta desde el sitio web",
+          Mensaje: message,
+          _replyto: email,
+          _template: "table",
+        }),
+      });
+    } catch (err) {
+      console.error("Error al enviar email via FormSubmit:", err);
+    }
 
     return NextResponse.json({ ok: true });
   } catch {
