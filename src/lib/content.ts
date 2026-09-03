@@ -9,6 +9,8 @@ export const NAV_LINKS = [
   { href: "/contacto", label: "CONTACTO" },
 ] as const;
 
+export const NAV_ITEMS = NAV_LINKS;
+
 export const SITE = {
   name: "Marcelo Katz",
   email: "marcelokatz@marcelokatz.com.ar",
