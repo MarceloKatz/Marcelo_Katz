@@ -3,33 +3,38 @@ import Link from "next/link";
 
 const DOCENCIA = {
   title: "Entrenamientos para amateurs y profesionales",
-  subtitle: "Presenciales y on line.",
   disciplines: [
     {
       label: "CLOWN",
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg",
+      targetId: "entrenamiento-clown",
     },
     {
       label: "BUFÓN",
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_3-DOCENCIA.jpg",
+      targetId: "entrenamiento-bufon",
     },
     {
       label: "MÁSCARAS",
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-4-DOCENCIA.jpg",
+      targetId: "entrenamiento-mascaras",
     },
   ],
   schedules: [],
   trainings: [
     {
+      id: "entrenamiento-clown",
       title: "Entrenamiento de Clown",
       body: "Una experiencia apasionante, vigorizante, intensa, transformadora y divertida. Nos reencuentra con la potencia del juego y nos permite compartirlo con el público y los compañeros de escena. Nos anima a mostrar quiénes somos y a generar un vínculo profundo con el público. Cuerpo, presente, ritmo, vulnerabilidad, empatía, impulso, contacto, emoción, risa, autenticidad.",
     },
     {
+      id: "entrenamiento-bufon",
       title: "Entrenamiento de Bufón",
       body: "El placer de transgredir y denunciar indagando en la monstruosidad y bestialidad que habita en nosotros. Los bufones se burlan de todo y de todos, poniendo de manifiesto la absurdidad de las instituciones y las relaciones humanas. Todo esto, buscando al mismo tiempo la comicidad. Un entrenamiento intenso sobre la búsqueda del cuerpo-bufón (monstruos, deformes, bestias, personajes fantásticos). El ritmo, la urgencia (y supervivencia escénica), los quiebres y el contacto con el público. Una indagación profunda y divertida de las temáticas de conflictiva de lo humano, que tocan a cada alumno.",
       link: { label: "Video de entrenamiento de bufón", url: "https://www.youtube.com/watch?v=UuPba0ybilw" },
     },
     {
+      id: "entrenamiento-mascaras",
       title: "Entrenamiento de Máscaras",
       body: "Un viaje sorprendente para descubrir otros personajes y otros cuerpos que habitan en uno. Un entrenamiento meticuloso para encontrar el cuerpo adecuado para cada máscara que se utiliza. Implica encontrar la unidad de ese nuevo rostro (la máscara) con el cuerpo, las dinámicas de movimiento y la personalidad que de ahí resulta y da vida al nuevo personaje.",
     },
@@ -78,9 +83,6 @@ export default function DocenciaPage() {
             <h1 className="text-2xl sm:text-4xl tracking-[0.2em] font-medium uppercase text-ink">
               {DOCENCIA.title}
             </h1>
-            <p className="text-lg sm:text-2xl tracking-[0.15em] font-light uppercase text-ink/80">
-              {DOCENCIA.subtitle}
-            </p>
           </div>
           <Link 
             href="/agenda" 
@@ -93,8 +95,12 @@ export default function DocenciaPage() {
         {/* Disciplines Section */}
         <section className="grid sm:grid-cols-3 gap-12 sm:gap-16 pt-10">
           {DOCENCIA.disciplines.map((d) => (
-            <div key={d.label} className="flex flex-col items-center space-y-8">
-              <div className="relative w-full aspect-[4/3] overflow-hidden group shadow-sm">
+            <a 
+              key={d.label} 
+              href={`#${d.targetId}`}
+              className="flex flex-col items-center space-y-8 group cursor-pointer"
+            >
+              <div className="relative w-full aspect-[4/3] overflow-hidden shadow-sm rounded-lg">
                 <Image 
                   src={d.image} 
                   alt={d.label} 
@@ -103,10 +109,10 @@ export default function DocenciaPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700" 
                 />
               </div>
-              <h3 className="text-lg sm:text-xl tracking-[0.2em] font-medium uppercase text-ink/90">
+              <h3 className="text-lg sm:text-xl tracking-[0.2em] font-medium uppercase text-ink/90 group-hover:text-accent transition-colors">
                 {d.label}
               </h3>
-            </div>
+            </a>
           ))}
         </section>
 
@@ -125,7 +131,7 @@ export default function DocenciaPage() {
         {/* Trainings Detail Section */}
         <section className="space-y-32 py-20 max-w-4xl mx-auto border-t border-ink/5">
           {DOCENCIA.trainings.map((t) => (
-            <article key={t.title} className="text-center space-y-10 group">
+            <article key={t.title} id={t.id} className="text-center space-y-10 group scroll-mt-28">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-ink">
                 {t.title}
               </h2>

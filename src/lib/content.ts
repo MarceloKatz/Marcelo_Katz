@@ -49,19 +49,21 @@ export const HOME = {
 // DOCENCIA ------------------------------------------------------------------
 export const DOCENCIA = {
   title: "Entrenamientos para amateurs y profesionales",
-  subtitle: "Presenciales y on line.",
   disciplines: [
     {
       label: "CLOWN",
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg",
+      targetId: "entrenamiento-clown",
     },
     {
       label: "BUFÓN",
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_3-DOCENCIA.jpg",
+      targetId: "entrenamiento-bufon",
     },
     {
       label: "MÁSCARAS",
       image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-4-DOCENCIA.jpg",
+      targetId: "entrenamiento-mascaras",
     },
   ],
   schedules: [],
