@@ -13,7 +13,7 @@ export const NAV_ITEMS = NAV_LINKS;
 
 export const SITE = {
   name: "Marcelo Katz",
-  email: "marcelokatz@marcelokatz.com.ar",
+  email: "mkatz6951@gmail.com",
   whatsapp: "5491136317717",
   whatsappLink: "https://wa.me/5491136317717",
   logo: "/images/site_assets/cropped-web-MK-template2-03.png",

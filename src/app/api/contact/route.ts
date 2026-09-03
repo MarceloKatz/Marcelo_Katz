@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const recipient = process.env.CONTACT_EMAIL_TO || "marcelokatz@marcelokatz.com.ar";
+    const recipient = process.env.CONTACT_EMAIL_TO || "mkatz6951@gmail.com";
 
     // Enviar directamente a mkatz6951@gmail.com vía FormSubmit service
     try {
