@@ -2,7 +2,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 const SITE = {
   name: "Marcelo Katz",
-  email: "mkatz6951@gmail.com",
+  email: "marcelokatz@marcelokatz.com.ar",
   whatsapp: "+54 9 11 3631-7717",
   whatsappLink: "https://wa.me/5491136317717",
   address: "Espacio Aguirre — Aguirre 1270, Villa Crespo, Buenos Aires, Argentina",
