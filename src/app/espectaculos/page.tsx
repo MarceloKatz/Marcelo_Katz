@@ -27,6 +27,7 @@ const ESPECTACULOS = {
       "Premio Teatros del Mundo (de la Universidad de Buenos Aires)",
       "Premio María Guerrero",
       "Premio Pregonero (de la Fundación El Libro)",
+      "Premio CTBA a la Creación y Producción de Artes Escénicas en Salas del Circuito Independiente 2021",
       "Entre otros.",
     ],
   },
