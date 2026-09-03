@@ -37,7 +37,7 @@ export default async function PrensaPage() {
     console.error("Error fetching from Sanity:", error);
   }
 
-  const items = sanityPrensa.length > 0
+  const items = (sanityPrensa.length > 0 && sanityPrensa.every((doc: any) => doc.image))
     ? sanityPrensa.map((doc: any) => ({
         title: doc.title,
         href: doc.href,
