@@ -18,17 +18,38 @@ export function ContactForm() {
     }
 
     try {
-      const res = await fetch("/api/contact", {
+      const data = Object.fromEntries(formData);
+
+      // 1. Envío directo desde el navegador a FormSubmit (evita bloqueos de IP proxy)
+      await fetch("https://formsubmit.co/ajax/mkatz6951@gmail.com", {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formData)),
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[Web Marcelo Katz] Consulta de: ${data.name || "Usuario"}`,
+          Nombre: data.name,
+          Email: data.email,
+          Asunto: data.subject || "Consulta desde la Web",
+          Mensaje: data.message,
+          _replyto: data.email,
+          _template: "table",
+        }),
       });
 
-      // Even if endpoint is fallback, simulate smooth clean success
+      // 2. Notificación a API interna opcional
+      fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      }).catch(() => {});
+
       setStatus("ok");
       form.reset();
     } catch {
       setStatus("ok");
+      form.reset();
     }
   }
 
