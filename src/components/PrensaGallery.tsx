@@ -54,15 +54,18 @@ export default function PrensaGallery({ items }: PrensaGalleryProps) {
             onClick={() => setSelectedIndex(idx)}
             className="group space-y-3 cursor-pointer select-none"
           >
-            <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100 shadow-md border border-gray-200 group-hover:shadow-xl transition-all">
-              {item.image && (
-                <Image
+            <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-gray-100 shadow-md border border-gray-200 group-hover:shadow-xl transition-all flex items-center justify-center">
+              {item.image ? (
+                <img
                   src={item.image}
                   alt={item.title || "Nota de prensa"}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
+              ) : (
+                <div className="p-6 text-center text-gray-400 font-medium text-xs">
+                  📰 Ver Nota de Prensa
+                </div>
               )}
 
               {/* Hover overlay hint */}
@@ -105,14 +108,11 @@ export default function PrensaGallery({ items }: PrensaGalleryProps) {
 
             {/* Image Viewer */}
             <div className="relative flex-1 overflow-auto p-4 sm:p-6 flex items-center justify-center bg-black/60 min-h-[50vh]">
-              <div className="relative w-full h-[65vh] max-h-[750px]">
-                <Image
+              <div className="relative w-full h-[65vh] max-h-[750px] flex items-center justify-center">
+                <img
                   src={selectedItem.image}
                   alt={selectedItem.title}
-                  fill
-                  sizes="100vw"
-                  className="object-contain"
-                  priority
+                  className="max-w-full max-h-full object-contain mx-auto my-auto rounded-lg shadow-lg"
                 />
               </div>
             </div>
