@@ -36,7 +36,7 @@ export function ContactForm() {
     <div className="bg-white p-6 sm:p-10 rounded-3xl border border-gray-200 shadow-xl space-y-8">
       <div className="space-y-2">
         <h2 className="text-2xl font-bold text-gray-900 tracking-tight">
-          Enviane un mensaje directo
+          Enviame un mensaje directo
         </h2>
         <p className="text-sm text-gray-500">
           Completá el formulario y nos pondremos en contacto a la brevedad.
