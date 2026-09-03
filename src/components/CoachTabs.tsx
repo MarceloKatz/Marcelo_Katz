@@ -215,11 +215,11 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
               </p>
             </div>
 
-            {/* Columna Imagen - Imagen de la web anterior */}
+            {/* Columna Imagen Principal */}
             <div className="lg:col-span-6 w-full">
               <div className="relative w-full h-[320px] sm:h-[440px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                 <Image
-                  src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°3-Coach.-Universidad-de-Palermo.jpg"
+                  src="/images/coach/coach-2.jpg"
                   alt="Entrenamiento de Oratoria y Empatía"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -230,26 +230,19 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             </div>
           </section>
 
-          {/* MUESTRA DE 2 IMÁGENES NUEVAS (remplazando las de los barbijos) */}
-          <section className="grid sm:grid-cols-2 gap-6">
-            <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-              <Image
-                src="/images/coach/j-s-c-abril-26-8.jpg"
-                alt="Foto de entrenamiento expresividad y empatía"
-                fill
-                sizes="50vw"
-                className="object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-              <Image
-                src="/images/coach/j-s-c-abril-26-9.jpg"
-                alt="Foto de entrenamiento expresividad y empatía"
-                fill
-                sizes="50vw"
-                className="object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+          {/* CARRUSEL DE IMÁGENES INTERACTIVO (Reemplazando imágenes viejas y barbijos por las nuevas 8.jpg y 9.jpg) */}
+          <section className="space-y-6">
+            <h3 className="text-center text-xs font-bold tracking-[0.25em] text-[#7B61FF] uppercase">
+              Galería del Entrenamiento
+            </h3>
+            <ExpresividadCarousel
+              images={[
+                { src: "/images/coach/j-s-c-abril-26-8.jpg", alt: "Entrenamiento Expresividad y Empatía 1" },
+                { src: "/images/coach/j-s-c-abril-26-9.jpg", alt: "Entrenamiento Expresividad y Empatía 2" },
+                { src: "/images/coach/j-s-c-abril-26-4.jpg", alt: "Taller Expresividad y Empatía 3" },
+                { src: "/images/coach/coach-2.jpg", alt: "Taller Expresividad y Empatía 4" },
+              ]}
+            />
           </section>
 
           {/* Beneficios */}
@@ -286,6 +279,60 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
           </section>
         </div>
       )}
+    </div>
+  );
+}
+
+function ExpresividadCarousel({ images }: { images: { src: string; alt: string }[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className="relative w-full h-[320px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl border border-gray-200 group">
+      <Image
+        src={images[currentIndex].src}
+        alt={images[currentIndex].alt}
+        fill
+        sizes="100vw"
+        className="object-cover transition-all duration-500"
+        priority
+      />
+
+      {/* Botones de navegación */}
+      <button
+        onClick={prevSlide}
+        aria-label="Imagen anterior"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition-all opacity-80 group-hover:opacity-100 shadow-md text-lg"
+      >
+        ❮
+      </button>
+      <button
+        onClick={nextSlide}
+        aria-label="Imagen siguiente"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition-all opacity-80 group-hover:opacity-100 shadow-md text-lg"
+      >
+        ❯
+      </button>
+
+      {/* Indicadores de puntos */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-black/40 backdrop-blur-md px-3.5 py-2 rounded-full">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-2.5 h-2.5 rounded-full transition-all ${
+              currentIndex === idx ? "bg-white scale-125" : "bg-white/50 hover:bg-white/80"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
