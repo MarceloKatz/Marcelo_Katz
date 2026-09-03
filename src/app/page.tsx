@@ -6,12 +6,12 @@ const SITE = {
   email: "marcelokatz@marcelokatz.com.ar",
   whatsapp: "5491136317717",
   whatsappLink: "https://wa.me/5491136317717",
-  logo: "https://marcelokatz.com.ar/wp-content/uploads/2018/09/cropped-web-MK-template2-03.png",
-  logoFooter: "https://marcelokatz.com.ar/wp-content/uploads/2019/07/logoFooter-300x208.png",
+  logo: "/images/site_assets/cropped-web-MK-template2-03.png",
+  logoFooter: "/images/site_assets/logoFooter-300x208.png",
 };
 
 const HOME = {
-  heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_HOME.jpeg",
+  heroImage: "/images/site_assets/FOTO_HOME.jpeg",
   headline: "KATZ\nCLOWN - MÁSCARAS - BUFÓN\nLIDERAZGO - EMPATÍA - EXPRESIVIDAD - JUEGO",
   intro:
     "Puentes invisibles que unen a las personas consigo mismas y con los demás. El placer de compartir y contactar. Convocar a la risa y al juego.",

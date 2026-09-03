@@ -15,7 +15,7 @@ export default function LandingClownPage() {
       <section className="relative bg-black text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 opacity-35">
           <Image
-            src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg"
+            src="/images/site_assets/FOTO_2-DOCENCIA.jpg"
             alt="Clown y Bufón Marcelo Katz"
             fill
             priority
@@ -70,7 +70,7 @@ export default function LandingClownPage() {
           <div className="bg-gray-50 p-8 rounded-3xl border border-gray-200 space-y-6 hover:shadow-xl transition-all">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
               <Image
-                src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg"
+                src="/images/site_assets/FOTO_2-DOCENCIA.jpg"
                 alt="Entrenamiento de Clown"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -87,7 +87,7 @@ export default function LandingClownPage() {
           <div className="bg-gray-50 p-8 rounded-3xl border border-gray-200 space-y-6 hover:shadow-xl transition-all">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
               <Image
-                src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_3-DOCENCIA.jpg"
+                src="/images/site_assets/FOTO_3-DOCENCIA.jpg"
                 alt="Entrenamiento de Bufón"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -104,7 +104,7 @@ export default function LandingClownPage() {
           <div className="bg-gray-50 p-8 rounded-3xl border border-gray-200 space-y-6 hover:shadow-xl transition-all">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
               <Image
-                src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-4-DOCENCIA.jpg"
+                src="/images/site_assets/FOTO-4-DOCENCIA.jpg"
                 alt="Entrenamiento de Máscaras"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -124,7 +124,7 @@ export default function LandingClownPage() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-[280px_1fr] gap-10 items-center">
           <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
             <Image
-              src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/BIO.jpg"
+              src="/images/site_assets/BIO.jpg"
               alt="Marcelo Katz Director"
               fill
               sizes="280px"

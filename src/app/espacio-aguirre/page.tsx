@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const ESPACIO_AGUIRRE = {
-  heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/espacioAguirre.jpg",
+  heroImage: "/images/site_assets/espacioAguirre.jpg",
   paragraphs: [
     "Después de 15 años de deambular con mis clases y espectáculos, a fines de 1999 concreté el sueño de un espacio propio. Una vieja fábrica de juguetes ubicada en el barrio de Villa Crespo, en Buenos Aires, se convirtió en un teatro y una escuela de clown, bufón y máscaras.",
     "El teatro tiene capacidad para 100 espectadores. Aloja algunas de mis producciones, las de la escuela y producciones invitadas.",
@@ -13,7 +13,7 @@ const ESPACIO_AGUIRRE = {
   external: {
     label: "Espacio Aguirre",
     url: "https://espacioaguirre.com.ar/",
-    logo: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Espaguirre.png",
+    logo: "/images/site_assets/Espaguirre.png",
   },
 };
 

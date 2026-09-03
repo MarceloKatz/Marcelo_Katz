@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const BIO = {
-  heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/BIO.jpg",
+  heroImage: "/images/site_assets/BIO.jpg",
   title: "BIO",
   paragraphs: [
     "Desde 1985 desarrollo un recorrido como director, actor, docente y creador escénico. Mi trabajo cruza el humor, el teatro físico y una fuerte búsqueda visual para crear experiencias que divierten, conmueven e invitan a mirar la realidad desde otra perspectiva. A lo largo de los años investigué especialmente el clown, el bufón y las máscaras, lenguajes que siguen siendo una parte fundamental de mi trabajo.",

@@ -1,22 +1,12 @@
-/**
- * Contenido inicial del sitio.
- *
- * Esta es la fuente de verdad ahora. Una vez que se levante Sanity,
- * los schemas en /sanity/schemas/ replican esta estructura — basta con
- * importar este archivo en un script de seed para poblar el CMS.
- *
- * Marcelo va a poder editar todo desde el Studio.
- */
-
-export const NAV_ITEMS = [
-  { label: "DOCENCIA", href: "/docencia" },
-  { label: "ESPACIO AGUIRRE", href: "/espacio-aguirre" },
-  { label: "ESPECTÁCULOS", href: "/espectaculos" },
-  { label: "PERSONAS Y ORGANIZACIONES", href: "/coach" },
-  { label: "AGENDA", href: "/agenda" },
-  { label: "BIO", href: "/bio" },
-  { label: "PRENSA", href: "/prensa" },
-  { label: "CONTACTO", href: "/contacto" },
+export const NAV_LINKS = [
+  { href: "/docencia", label: "DOCENCIA" },
+  { href: "/espacio-aguirre", label: "ESPACIO AGUIRRE" },
+  { href: "/espectaculos", label: "ESPECTÁCULOS" },
+  { href: "/coach", label: "PERSONAS Y ORGANIZACIONES" },
+  { href: "/agenda", label: "AGENDA" },
+  { href: "/bio", label: "BIO" },
+  { href: "/prensa", label: "PRENSA" },
+  { href: "/contacto", label: "CONTACTO" },
 ] as const;
 
 export const SITE = {
@@ -24,13 +14,13 @@ export const SITE = {
   email: "marcelokatz@marcelokatz.com.ar",
   whatsapp: "5491136317717",
   whatsappLink: "https://wa.me/5491136317717",
-  logo: "https://marcelokatz.com.ar/wp-content/uploads/2018/09/cropped-web-MK-template2-03.png",
-  logoFooter: "https://marcelokatz.com.ar/wp-content/uploads/2019/07/logoFooter-300x208.png",
+  logo: "/images/site_assets/cropped-web-MK-template2-03.png",
+  logoFooter: "/images/site_assets/logoFooter-300x208.png",
 };
 
 // HOME ----------------------------------------------------------------------
 export const HOME = {
-  heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_HOME.jpeg",
+  heroImage: "/images/site_assets/FOTO_HOME.jpeg",
   headline: "KATZ\nCLOWN - MÁSCARAS - BUFÓN\nLIDERAZGO - EMPATÍA - EXPRESIVIDAD - JUEGO",
   intro:
     "Puentes invisibles que unen a las personas consigo mismas y con los demás. El placer de compartir y contactar. Convocar a la risa y al juego.",
@@ -52,17 +42,17 @@ export const DOCENCIA = {
   disciplines: [
     {
       label: "CLOWN",
-      image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_2-DOCENCIA.jpg",
+      image: "/images/site_assets/FOTO_2-DOCENCIA.jpg",
       targetId: "entrenamiento-clown",
     },
     {
       label: "BUFÓN",
-      image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_3-DOCENCIA.jpg",
+      image: "/images/site_assets/FOTO_3-DOCENCIA.jpg",
       targetId: "entrenamiento-bufon",
     },
     {
       label: "MÁSCARAS",
-      image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-4-DOCENCIA.jpg",
+      image: "/images/site_assets/FOTO-4-DOCENCIA.jpg",
       targetId: "entrenamiento-mascaras",
     },
   ],
@@ -84,28 +74,28 @@ export const DOCENCIA = {
   ],
   interview: { label: "Entrevista a M. Katz", url: "https://www.youtube.com/watch?v=hYzYAIZSAio" },
   gallery: [
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-5-docencia.-Paris.-2016.jpg", caption: "Paris 2016" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-6-docencia.-Barcelona-2018-1.jpg", caption: "Barcelona 2018" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-7-docencia.-Clase-Magistral-en-Espacio-Aguirre.jpg", caption: "Clase Magistral en Espacio Aguirre 2013" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-docencia.-Mar-del-Plata-2019.jpg", caption: "Mar del Plata 2019" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-docencia.-Arrigorriaga-España-2014.jpg", caption: "Arrigorriaga, España 2014" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-10-docencia.-Durango-España-2008.jpg", caption: "Durango, España 2008" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-11-docencia.-Pamplona-2016.jpg", caption: "Pamplona 2016" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-12-docencia.-Logroño-España-2013.jpg", caption: "Logroño, España 2013" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-13-docencia.-Vitoria-España-2018.jpeg", caption: "Vitoria, España 2018" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-14-docencia.-Santiago-de-Chile-2019.jpg", caption: "Santiago de Chile 2019" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/CELCIT-2016.jpeg", caption: "CELCIT 2016" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-16-docencia.-Parma-Italia-2016.jpg", caption: "Parma, Italia 2016" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-17-docencia.-Zaragoza-2015.jpg", caption: "Zaragoza 2015" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/bariloche-2017.jpeg", caption: "Bariloche 2017" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Córdoba-2011.jpeg", caption: "Córdoba 2011" },
-    { image: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Universidad-de-Buenos-Aires.-2012..jpg", caption: "Universidad de Buenos Aires 2012" },
+    { image: "/images/site_assets/FOTO-N°-5-docencia.-Paris.-2016.jpg", caption: "Paris 2016" },
+    { image: "/images/site_assets/FOTO-N°-6-docencia.-Barcelona-2018-1.jpg", caption: "Barcelona 2018" },
+    { image: "/images/site_assets/FOTO-N°-7-docencia.-Clase-Magistral-en-Espacio-Aguirre.jpg", caption: "Clase Magistral en Espacio Aguirre 2013" },
+    { image: "/images/site_assets/FOTO-N°-8-docencia.-Mar-del-Plata-2019.jpg", caption: "Mar del Plata 2019" },
+    { image: "/images/site_assets/FOTO-N°-9-docencia.-Arrigorriaga-España-2014.jpg", caption: "Arrigorriaga, España 2014" },
+    { image: "/images/site_assets/FOTO-N°-10-docencia.-Durango-España-2008.jpg", caption: "Durango, España 2008" },
+    { image: "/images/site_assets/FOTO-N°-11-docencia.-Pamplona-2016.jpg", caption: "Pamplona 2016" },
+    { image: "/images/site_assets/FOTO-N°-12-docencia.-Logroño-España-2013.jpg", caption: "Logroño, España 2013" },
+    { image: "/images/site_assets/FOTO-N°-13-docencia.-Vitoria-España-2018.jpeg", caption: "Vitoria, España 2018" },
+    { image: "/images/site_assets/FOTO-N°-14-docencia.-Santiago-de-Chile-2019.jpg", caption: "Santiago de Chile 2019" },
+    { image: "/images/site_assets/CELCIT-2016.jpeg", caption: "CELCIT 2016" },
+    { image: "/images/site_assets/FOTO-N°-16-docencia.-Parma-Italia-2016.jpg", caption: "Parma, Italia 2016" },
+    { image: "/images/site_assets/FOTO-N°-17-docencia.-Zaragoza-2015.jpg", caption: "Zaragoza 2015" },
+    { image: "/images/site_assets/bariloche-2017.jpeg", caption: "Bariloche 2017" },
+    { image: "/images/site_assets/Córdoba-2011.jpeg", caption: "Córdoba 2011" },
+    { image: "/images/site_assets/Universidad-de-Buenos-Aires.-2012..jpg", caption: "Universidad de Buenos Aires 2012" },
   ],
 };
 
 // ESPACIO AGUIRRE -----------------------------------------------------------
 export const ESPACIO_AGUIRRE = {
-  heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/espacioAguirre.jpg",
+  heroImage: "/images/site_assets/espacioAguirre.jpg",
   paragraphs: [
     "Después de 15 años de deambular con mis clases y espectáculos, a fines de 1999 concreté el sueño de un espacio propio. Una vieja fábrica de juguetes ubicada en el barrio de Villa Crespo, en Buenos Aires, se convirtió en un teatro y una escuela de clown, bufón y máscaras.",
     "El teatro tiene capacidad para 100 espectadores. Aloja algunas de mis producciones, las de la escuela y producciones invitadas.",
@@ -117,7 +107,7 @@ export const ESPACIO_AGUIRRE = {
   external: {
     label: "Espacio Aguirre",
     url: "https://espacioaguirre.com.ar/",
-    logo: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/Espaguirre.png",
+    logo: "/images/site_assets/Espaguirre.png",
   },
 };
 
@@ -141,9 +131,6 @@ Estrené como director en reconocidos teatros de Buenos Aires: Teatro Municipal 
 
 Mis espectáculos se presentaron en Argentina, Uruguay, Chile, Perú, Colombia, España, Estados Unidos, Dinamarca y Francia.`,
   },
-  // Las críticas son citas atribuidas a periodistas. Se mantienen como tal:
-  // son testimonios de terceros sobre la obra de Marcelo y forman parte
-  // legítima de su material de prensa.
   reviews: [
     { source: "La Nación", author: "Jazmín Carbonell", quote: "Marcelo Katz nos sorprende gratamente. En “Top, top, top” está impecable y hace honor a su sobresaliente trayectoria, con una ternura que emociona. Humor sano e inteligente." },
     { source: "El Diario de Ibiza", quote: "Descomunal actuación de Marcelo Katz. Ha llevado a la platea de la risa al llanto con sutileza y maestría." },
@@ -153,8 +140,8 @@ Mis espectáculos se presentaron en Argentina, Uruguay, Chile, Perú, Colombia, 
     { source: "Mirada y Sentido", author: "Patricia Lanatta", quote: "Nuevamente el director Marcelo Katz nos asombra con su talento para enlazar lo cómico y lo onírico y genera cuadros fantásticos. Consigue que el espectador se espeje en ese sueño a través de escenas hilvanadas por la puntada del humor, seguida de la imagen poderosa. Hay belleza." },
   ],
   images: [
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-9-Espectáculos.-Los-fabulosos-singer-2013.jpeg", caption: "Los Fabulosos Singer (2013)" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-espectáculos.-Aguas-2008.jpg", caption: "Aguas (2008)" },
+    { src: "/images/site_assets/FOTO-N°-9-Espectáculos.-Los-fabulosos-singer-2013.jpeg", caption: "Los Fabulosos Singer (2013)" },
+    { src: "/images/site_assets/FOTO-N°-8-espectáculos.-Aguas-2008.jpg", caption: "Aguas (2008)" },
   ],
   awards: {
     title: "PREMIOS Y NOMINACIONES",
@@ -172,8 +159,8 @@ Mis espectáculos se presentaron en Argentina, Uruguay, Chile, Perú, Colombia, 
     title: "ACTOR",
     body: "Mi primera actuación profesional fue a los 18 años, en un espectáculo en homenaje a Kafka producido por la embajada de Austria en Argentina. A los 23 años fui seleccionado para integrar los elencos del Teatro Municipal General San Martín de Buenos Aires. Integré la compañía de Danza de Teresa Duggan y actué en espectáculos de circo, teatro y clown en Argentina y en varios países de América y Europa.",
     images: [
-      { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°11-ESPECTÁCULOS.-La-comedia-de-las-equivocaciones.-1988-692x1024.jpg", caption: "La comedia de las equivocaciones (1988)" },
-      { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°10-Espectáculos.-Elemental-2006.jpg", caption: "Elemental (2006)" },
+      { src: "/images/site_assets/FOTO-N°11-ESPECTÁCULOS.-La-comedia-de-las-equivocaciones.-1988-692x1024.jpg", caption: "La comedia de las equivocaciones (1988)" },
+      { src: "/images/site_assets/FOTO-N°10-Espectáculos.-Elemental-2006.jpg", caption: "Elemental (2006)" },
     ],
   },
   director: {
@@ -190,9 +177,9 @@ export const COACH = {
   clients:
     "Entrené a destacados científicos, empresarios y políticos: Martín Lousteau, Matías Tombolini, Marco Lavagna, entre otros. Y a equipos gerenciales de empresas como Motorola, Federal Express, MetLife, Booking Argentina, Maprimed, Enerminds, Rapipago, entre otras.",
   images: [
-    "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°1-Coach.-Entrenamiento-a-Gerentes.-300x225.jpeg",
-    "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°2-Coach.-Entrenamiento-a-equipos-300x225.jpeg",
-    "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°3-Coach.-Universidad-de-Palermo-300x199.jpg",
+    "/images/coach/coach-1.jpg",
+    "/images/coach/coach-2.jpg",
+    "/images/coach/j-s-c-abril-26-8.jpg",
   ],
   benefits: {
     title: "Qué permite el entrenamiento",
@@ -235,17 +222,17 @@ export const EVENTOS = {
   clients:
     "Unicenter, L'Oréal, Banco de Boston, Nokia, Petrobras, Siderca, América TV, Telefé, Abasto Shopping, Aysa, Gándara, Municipalidad de Buenos Aires, Secretaría de Cultura de la Nación, son parte de las empresas que han contratado mis servicios.",
   galleryTop: [
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°1-Dragón-de-luces.jpg", caption: "Dragón de luces" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°2-Acróbata-aérea..jpg", caption: "Acróbata aérea" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°3-Swing-con-luces.jpg", caption: "Swing con luces" },
+    { src: "/images/site_assets/FOTO-N°1-Dragón-de-luces.jpg", caption: "Dragón de luces" },
+    { src: "/images/site_assets/FOTO-N°2-Acróbata-aérea..jpg", caption: "Acróbata aérea" },
+    { src: "/images/site_assets/FOTO-N°3-Swing-con-luces.jpg", caption: "Swing con luces" },
   ],
   galleryBottom: [
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°4-Magos.jpg", caption: "Magos" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°7-Malabares-con-fuego-1.jpg", caption: "Malabares con fuego" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°5-Personajes-sorprendentes.jpg", caption: "Personajes sorprendentes" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°8-Clowns.jpg", caption: "Clowns" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°6-Dobles.jpg", caption: "Dobles" },
-    { src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°9-Contact-y-equilibristas.jpg", caption: "Contact y equilibristas" },
+    { src: "/images/site_assets/FOTO-N°4-Magos.jpg", caption: "Magos" },
+    { src: "/images/site_assets/FOTO-N°7-Malabares-con-fuego-1.jpg", caption: "Malabares con fuego" },
+    { src: "/images/site_assets/FOTO-N°5-Personajes-sorprendentes.jpg", caption: "Personajes sorprendentes" },
+    { src: "/images/site_assets/FOTO-N°8-Clowns.jpg", caption: "Clowns" },
+    { src: "/images/site_assets/FOTO-N°6-Dobles.jpg", caption: "Dobles" },
+    { src: "/images/site_assets/FOTO-N°9-Contact-y-equilibristas.jpg", caption: "Contact y equilibristas" },
   ],
 };
 
@@ -295,7 +282,7 @@ export const AGENDA = {
 
 // BIO -----------------------------------------------------------------------
 export const BIO = {
-  heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/BIO.jpg",
+  heroImage: "/images/site_assets/BIO.jpg",
   title: "Marcelo Katz — Bio",
   paragraphs: [
     "Desde 1985 me dedico al teatro, a la danza, a la música y al circo como actor, director y maestro. Puse el acento en el clown, el bufón y las máscaras.",
@@ -318,24 +305,24 @@ export const BIO = {
 export type PrensaItem = { title: string; image: string; href: string };
 
 export const PRENSA: PrensaItem[] = [
-  { title: "Diario Kultura. España", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/2-Nota-a-Marcelo-Katz-2015-Diario-Kultura-690x899.jpg", href: "https://marcelokatz.com.ar/nota-a-marcelo-katz-2015-diario-kultura/" },
-  { title: "Buenos Aires Herald", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/Buenos-Aires-Herald-690x574.jpg", href: "https://marcelokatz.com.ar/02_clases-3/" },
-  { title: "El Diario de Ibiza, España", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/11-El-diario-de-Ibiza.-Nota-a-M.Katz_-690x946.jpg", href: "https://marcelokatz.com.ar/el-diario-de-ibiza-nota-a-m-katz/" },
-  { title: "Revista Mutis por el Foro", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/15-Nota-a-M.Katz_.-Revista-Mutis-por-el-Foro.-690x352.jpg", href: "https://marcelokatz.com.ar/nota-a-m-katz-revista-mutis-por-el-foro/" },
-  { title: "Clarín — Aguas", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/Clarin.-Aguas.-690x623.jpg", href: "https://marcelokatz.com.ar/clarin-aguas/" },
-  { title: "Revista Anfibia", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/3-reite-de-vos-690x459.jpg", href: "https://marcelokatz.com.ar/reite-de-vos/" },
-  { title: "Buenos Aires Económico", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/Buenos-Aires-Económico.-Entrevista-a-M.Katz_-690x1202.jpg", href: "https://marcelokatz.com.ar/clases-5/" },
-  { title: "El Correo. País Vasco", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/16-EL-Correo.-País-Vasco.-2019-690x511.jpg", href: "https://marcelokatz.com.ar/el-correo-pais-vasco-2019/" },
-  { title: "Diario Berria. España", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/12-Nota-a-Marcelo-Katz-2015-Diario-Berria-690x896.jpg", href: "https://marcelokatz.com.ar/nota-a-marcelo-katz-2015-diario-berria/" },
-  { title: "Clarín — Amargo Dulzor", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/Clarin.-Amargo-Dulzor-690x551.jpg", href: "https://marcelokatz.com.ar/clarin-amargo-dulzor/" },
-  { title: "Diario Clarín. Entrevista", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/4-Diario-Clarin.-Entrevista-690x966.jpg", href: "https://marcelokatz.com.ar/diario-clarin-entrevista/" },
-  { title: "Buenos Aires Herald — Hazañas", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/Buenos-Aires-Herald-Hazañas-690x806.jpg", href: "https://marcelokatz.com.ar/clases-4/" },
-  { title: "Diario Clarín — Aires", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/7-Diario-Clarin.-Nota-por-espectáculo-Aires.-690x462.jpg", href: "https://marcelokatz.com.ar/diario-clarin-nota-por-espectaculo-aires/" },
-  { title: "La Voz del Interior, Córdoba", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/8-La-Voz-del-Interior-Córdoba.-2018-690x709.jpg", href: "https://marcelokatz.com.ar/la-voz-del-interior-cordoba-2018/" },
-  { title: "Entrevista en Clarín", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/10-Marcelo-Katz.-Entrevista-en-Clarin-690x959.jpg", href: "https://marcelokatz.com.ar/marcelo-katz-entrevista-en-clarin/" },
-  { title: "«Guillermo Tell» — Página 12", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/20-Pagina-12.-guillermo-tell.-690x710.jpg", href: "https://marcelokatz.com.ar/guillermo-tell/" },
-  { title: "Diario Z", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/capital-de-clowns-690x753.jpg", href: "https://marcelokatz.com.ar/capital-de-clowns/" },
-  { title: "Revista Viva — noviembre", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/14-Revista-Viva-noviembre-2011_1-690x461.jpg", href: "https://marcelokatz.com.ar/revista-viva-noviembre-2011/" },
-  { title: "BAE (Buenos Aires Económico)", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/21-M.Katz-en-BAE-Buenos-aires-económico-690x683.jpg", href: "https://marcelokatz.com.ar/m-katz-en-bae-buenos-aires-economico/" },
-  { title: "El arte de soñar entre risas", image: "https://marcelokatz.com.ar/wp-content/uploads/2019/06/18-nueva-690x950.jpg", href: "https://marcelokatz.com.ar/el-arte-de-sonar-entre-risas/" },
+  { title: "Diario Kultura. España", image: "/images/prensa/2-Nota-a-Marcelo-Katz-2015-Diario-Kultura-690x899.jpg", href: "https://marcelokatz.com.ar/nota-a-marcelo-katz-2015-diario-kultura/" },
+  { title: "Buenos Aires Herald", image: "/images/prensa/Buenos-Aires-Herald-690x574.jpg", href: "https://marcelokatz.com.ar/02_clases-3/" },
+  { title: "El Diario de Ibiza, España", image: "/images/prensa/11-El-diario-de-Ibiza.-Nota-a-M.Katz_-690x946.jpg", href: "https://marcelokatz.com.ar/el-diario-de-ibiza-nota-a-m-katz/" },
+  { title: "Revista Mutis por el Foro", image: "/images/prensa/15-Nota-a-M.Katz_.-Revista-Mutis-por-el-Foro.-690x352.jpg", href: "https://marcelokatz.com.ar/nota-a-m-katz-revista-mutis-por-el-foro/" },
+  { title: "Clarín — Aguas", image: "/images/prensa/Clarin.-Aguas.-690x623.jpg", href: "https://marcelokatz.com.ar/clarin-aguas/" },
+  { title: "Revista Anfibia", image: "/images/prensa/3-reite-de-vos-690x459.jpg", href: "https://marcelokatz.com.ar/reite-de-vos/" },
+  { title: "Buenos Aires Económico", image: "/images/prensa/Buenos-Aires-Económico.-Entrevista-a-M.Katz_-690x1202.jpg", href: "https://marcelokatz.com.ar/clases-5/" },
+  { title: "El Correo. País Vasco", image: "/images/prensa/16-EL-Correo.-País-Vasco.-2019-690x511.jpg", href: "https://marcelokatz.com.ar/el-correo-pais-vasco-2019/" },
+  { title: "Diario Berria. España", image: "/images/prensa/12-Nota-a-Marcelo-Katz-2015-Diario-Berria-690x896.jpg", href: "https://marcelokatz.com.ar/nota-a-marcelo-katz-2015-diario-berria/" },
+  { title: "Clarín — Amargo Dulzor", image: "/images/prensa/Clarin.-Amargo-Dulzor-690x551.jpg", href: "https://marcelokatz.com.ar/clarin-amargo-dulzor/" },
+  { title: "Diario Clarín. Entrevista", image: "/images/prensa/4-Diario-Clarin.-Entrevista-690x966.jpg", href: "https://marcelokatz.com.ar/diario-clarin-entrevista/" },
+  { title: "Buenos Aires Herald — Hazañas", image: "/images/prensa/Buenos-Aires-Herald-Hazañas-690x806.jpg", href: "https://marcelokatz.com.ar/clases-4/" },
+  { title: "Diario Clarín — Aires", image: "/images/prensa/7-Diario-Clarin.-Nota-por-espectáculo-Aires.-690x462.jpg", href: "https://marcelokatz.com.ar/diario-clarin-nota-por-espectaculo-aires/" },
+  { title: "La Voz del Interior, Córdoba", image: "/images/prensa/8-La-Voz-del-Interior-Córdoba.-2018-690x709.jpg", href: "https://marcelokatz.com.ar/la-voz-del-interior-cordoba-2018/" },
+  { title: "Entrevista en Clarín", image: "/images/prensa/10-Marcelo-Katz.-Entrevista-en-Clarin-690x959.jpg", href: "https://marcelokatz.com.ar/marcelo-katz-entrevista-en-clarin/" },
+  { title: "«Guillermo Tell» — Página 12", image: "/images/prensa/20-Pagina-12.-guillermo-tell.-690x710.jpg", href: "https://marcelokatz.com.ar/guillermo-tell/" },
+  { title: "Diario Z", image: "/images/prensa/capital-de-clowns-690x753.jpg", href: "https://marcelokatz.com.ar/capital-de-clowns/" },
+  { title: "Revista Viva — noviembre", image: "/images/prensa/14-Revista-Viva-noviembre-2011_1-690x461.jpg", href: "https://marcelokatz.com.ar/revista-viva-noviembre-2011/" },
+  { title: "BAE (Buenos Aires Económico)", image: "/images/prensa/21-M.Katz-en-BAE-Buenos-aires-económico-690x683.jpg", href: "https://marcelokatz.com.ar/m-katz-en-bae-buenos-aires-economico/" },
+  { title: "El arte de soñar entre risas", image: "/images/prensa/18-nueva-690x950.jpg", href: "https://marcelokatz.com.ar/el-arte-de-sonar-entre-risas/" },
 ];

@@ -35,7 +35,7 @@ const ESPECTACULOS = {
     title: "ACTOR",
     body: "Mi primera actuación profesional fue a los 18 años, en un espectáculo en homenaje a Kafka producido por la embajada de Austria en Argentina. A los 23 años fui seleccionado para integrar los elencos del Teatro Municipal General San Martín de Buenos Aires. Integré la compañía de Danza de Teresa Duggan y actué en espectáculos de circo, teatro y clown en Argentina y en varios países de América y Europa.",
     image: {
-      src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°10-Espectáculos.-Elemental-2006.jpg",
+      src: "/images/site_assets/FOTO-N°10-Espectáculos.-Elemental-2006.jpg",
       caption: "Elemental (2006)",
     },
   },
@@ -43,7 +43,7 @@ const ESPECTACULOS = {
     title: "DIRECTOR",
     body: "En 1993 fundé La Trup, primera compañía de nuevo circo de Argentina. A cargo de este grupo, que expandió el arte circense en Argentina, monté espectáculos durante 7 años. Desde el 97 dirigí más de 50 espectáculos de teatro, clown, máscaras, música y circo. Tanto producciones propias como de otras compañías.",
     image: {
-      src: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°-8-espectáculos.-Aguas-2008.jpg",
+      src: "/images/site_assets/FOTO-N°-8-espectáculos.-Aguas-2008.jpg",
       caption: "Aguas (2008)",
     },
   },
