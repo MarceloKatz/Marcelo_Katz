@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-WR8L68F";
+const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-3JZ8LX3TFD";
 
 export const metadata: Metadata = {
   title: {
@@ -41,14 +41,24 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-      {gtmId && <GoogleTagManager gtmId={gtmId} />}
+      <GoogleTagManager gtmId={gtmId} />
       <body className="min-h-screen flex flex-col">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
-      {gaId && <GoogleAnalytics gaId={gaId} />}
+      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
