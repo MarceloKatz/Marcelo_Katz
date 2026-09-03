@@ -105,7 +105,7 @@ export default function LandingJuegoPage() {
             </div>
             <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-sm pt-4">
               <Image
-                src="/images/coach/coach-2.jpg"
+                src="/images/coach/j-s-c-abril-26-8.jpg"
                 alt="Expresividad y Empatía Taller"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

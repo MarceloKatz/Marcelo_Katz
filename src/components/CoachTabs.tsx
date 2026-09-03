@@ -52,9 +52,6 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             {/* Texto (Izquierda) */}
             <div className="lg:col-span-6 space-y-6 text-gray-800 font-light leading-relaxed text-base sm:text-lg">
               <div>
-                <span className="text-xs font-bold tracking-[0.2em] text-[#7B61FF] uppercase block mb-2">
-                  Coordinador: Marcelo Katz
-                </span>
                 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 leading-tight">
                   Un espacio para jugar, compartir, conocernos y crecer
                 </h2>
@@ -162,8 +159,8 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                 <Image
-                  src="/images/coach/coach-1.jpg"
-                  alt="Galería 1"
+                  src="/images/coach/j-s-c-abril-26-4.jpg"
+                  alt="Galería Taller Juego, Salud y Crecimiento 1"
                   fill
                   sizes="50vw"
                   className="object-cover hover:scale-105 transition-transform duration-700"
@@ -172,7 +169,7 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
               <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                 <Image
                   src="/images/coach/coach-2.jpg"
-                  alt="Galería 2"
+                  alt="Galería Taller Juego, Salud y Crecimiento 2"
                   fill
                   sizes="50vw"
                   className="object-cover hover:scale-105 transition-transform duration-700"
@@ -218,11 +215,11 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
               </p>
             </div>
 
-            {/* Columna Imagen - MUCHO MÁS GRANDE */}
+            {/* Columna Imagen - Imagen de la web anterior */}
             <div className="lg:col-span-6 w-full">
               <div className="relative w-full h-[320px] sm:h-[440px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                 <Image
-                  src="/images/coach/coach-2.jpg"
+                  src="https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO-N°3-Coach.-Universidad-de-Palermo.jpg"
                   alt="Entrenamiento de Oratoria y Empatía"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -233,12 +230,12 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             </div>
           </section>
 
-          {/* MUESTRA DE 2 IMÁGENES GRANDES */}
+          {/* MUESTRA DE 2 IMÁGENES NUEVAS (remplazando las de los barbijos) */}
           <section className="grid sm:grid-cols-2 gap-6">
             <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <Image
-                src="/images/coach/coach-1.jpg"
-                alt="Foto de entrenamiento 1"
+                src="/images/coach/j-s-c-abril-26-8.jpg"
+                alt="Foto de entrenamiento expresividad y empatía"
                 fill
                 sizes="50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -246,8 +243,8 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             </div>
             <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <Image
-                src="/images/coach/coach-2.jpg"
-                alt="Foto de entrenamiento 2"
+                src="/images/coach/j-s-c-abril-26-9.jpg"
+                alt="Foto de entrenamiento expresividad y empatía"
                 fill
                 sizes="50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
