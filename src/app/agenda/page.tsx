@@ -21,7 +21,7 @@ export default function AgendaPage() {
   const initialData = getInitialAgendaData();
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       <header className="text-center">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-wider text-gray-900 uppercase">
           AGENDA DE FUNCIONES Y ENTRENAMIENTOS

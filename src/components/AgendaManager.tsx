@@ -13,9 +13,35 @@ export type AgendaData = {
   entrenamientos: AgendaSection[];
 };
 
-interface AgendaManagerProps {
-  initialData: AgendaData;
-  isAdminPage?: boolean;
+function renderEventText(text: string) {
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    parts.push(
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 ml-2 text-xs font-bold uppercase tracking-wider text-white bg-[#7B61FF] hover:bg-[#6a52e6] px-3.5 py-1.5 rounded-md transition-all shadow-sm transform hover:scale-105"
+      >
+        🎟️ {match[1]}
+      </a>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
 }
 
 export default function AgendaManager({ initialData, isAdminPage = false }: AgendaManagerProps) {
@@ -156,50 +182,54 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
   // VISTA PÚBLICA (Para visitantes comunes en /agenda)
   if (!isAdminPage) {
     return (
-      <div className="space-y-16">
-        <section className="space-y-6">
-          <h2 className="text-2xl text-center pb-3 border-b border-gray-200 font-bold tracking-wide text-gray-900">
-            FUNCIONES
-          </h2>
-          <div className="space-y-8">
-            {data.funciones.map((s) => (
-              <div key={s.mes} className="grid md:grid-cols-[120px_1fr] gap-4 items-start">
-                <h3 className="text-[#7B61FF] font-bold tracking-widest text-sm uppercase mt-0.5">
-                  {s.mes}
-                </h3>
-                <ul className="space-y-2 text-gray-800">
-                  {s.eventos.map((e, i) => (
-                    <li key={i} className="leading-relaxed font-light text-base sm:text-lg">
-                      {e}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+      <div className="space-y-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* COLUMNA 1: FUNCIONES */}
+          <section className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-md">
+            <h2 className="text-xl sm:text-2xl text-center pb-4 border-b border-gray-100 font-bold tracking-widest uppercase text-gray-900 flex items-center justify-center gap-2">
+              <span>🎭</span> FUNCIONES
+            </h2>
+            <div className="space-y-6">
+              {data.funciones.map((s) => (
+                <div key={s.mes} className="space-y-3">
+                  <h3 className="text-[#7B61FF] font-bold tracking-widest text-xs uppercase bg-[#7B61FF]/10 inline-block px-3 py-1 rounded-full">
+                    {s.mes}
+                  </h3>
+                  <ul className="space-y-3 text-gray-800">
+                    {s.eventos.map((e, i) => (
+                      <li key={i} className="leading-relaxed font-normal text-sm sm:text-base bg-gray-50/80 p-4 rounded-xl border border-gray-100/80">
+                        {renderEventText(e)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        <section className="space-y-6">
-          <h2 className="text-2xl text-center pb-3 border-b border-gray-200 font-bold tracking-wide text-gray-900">
-            ENTRENAMIENTOS
-          </h2>
-          <div className="space-y-8">
-            {data.entrenamientos.map((s) => (
-              <div key={s.mes} className="grid md:grid-cols-[120px_1fr] gap-4 items-start">
-                <h3 className="text-[#7B61FF] font-bold tracking-widest text-sm uppercase mt-0.5">
-                  {s.mes}
-                </h3>
-                <ul className="space-y-2 text-gray-800">
-                  {s.eventos.map((e, i) => (
-                    <li key={i} className="leading-relaxed font-light text-base sm:text-lg">
-                      {e}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+          {/* COLUMNA 2: CURSOS */}
+          <section className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-md">
+            <h2 className="text-xl sm:text-2xl text-center pb-4 border-b border-gray-100 font-bold tracking-widest uppercase text-gray-900 flex items-center justify-center gap-2">
+              <span>🎓</span> CURSOS
+            </h2>
+            <div className="space-y-6">
+              {data.entrenamientos.map((s) => (
+                <div key={s.mes} className="space-y-3">
+                  <h3 className="text-[#7B61FF] font-bold tracking-widest text-xs uppercase bg-[#7B61FF]/10 inline-block px-3 py-1 rounded-full">
+                    {s.mes}
+                  </h3>
+                  <ul className="space-y-3 text-gray-800">
+                    {s.eventos.map((e, i) => (
+                      <li key={i} className="leading-relaxed font-normal text-sm sm:text-base bg-gray-50/80 p-4 rounded-xl border border-gray-100/80">
+                        {renderEventText(e)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
 
         {/* Enlace sutil al panel de administración en el pie */}
         <div className="text-center pt-8 border-t border-gray-100">
