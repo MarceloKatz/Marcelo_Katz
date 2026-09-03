@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     template: "%s | Marcelo Katz",
   },
   description:
-    "Marcelo Katz: actor, director, docente y coach. Empatía, clown, máscaras, bufón, oratoria, teatro y coaching. Espacio Aguirre — Buenos Aires.",
+    "Marcelo Katz: actor, director, docente y coach. Clown, máscaras, bufón, liderazgo, empatía, expresividad y juego. Espacio Aguirre — Buenos Aires.",
   metadataBase: new URL("https://marcelokatz.com.ar"),
   openGraph: {
     title: "Marcelo Katz",
     description:
-      "Empatía-Clown-Máscaras-Bufón-Oratoria-Teatro-Coaching. Espacio Aguirre, Buenos Aires.",
+      "CLOWN - MÁSCARAS - BUFÓN | LIDERAZGO - EMPATÍA - EXPRESIVIDAD - JUEGO. Espacio Aguirre, Buenos Aires.",
     locale: "es_AR",
     type: "website",
   },

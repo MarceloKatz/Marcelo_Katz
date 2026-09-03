@@ -31,7 +31,7 @@ export const SITE = {
 // HOME ----------------------------------------------------------------------
 export const HOME = {
   heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_HOME.jpeg",
-  headline: "KATZ: Empatía-Clown-Máscaras-Bufón-Oratoria-Teatro-Coaching.",
+  headline: "KATZ\nCLOWN - MÁSCARAS - BUFÓN\nLIDERAZGO - EMPATÍA - EXPRESIVIDAD - JUEGO",
   intro:
     "Puentes invisibles que unen a las personas consigo mismas y con los demás. El placer de compartir y contactar. Convocar a la risa y al juego.",
   paragraphs: [

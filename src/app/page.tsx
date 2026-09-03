@@ -12,7 +12,7 @@ const SITE = {
 
 const HOME = {
   heroImage: "https://marcelokatz.com.ar/wp-content/uploads/2021/10/FOTO_HOME.jpeg",
-  headline: "KATZ: Empatía-Clown-Máscaras-Bufón-Oratoria-Teatro-Coaching.",
+  headline: "KATZ\nCLOWN - MÁSCARAS - BUFÓN\nLIDERAZGO - EMPATÍA - EXPRESIVIDAD - JUEGO",
   intro:
     "Puentes invisibles que unen a las personas consigo mismas y con los demás. El placer de compartir y contactar. Convocar a la risa y al juego.",
   paragraphs: [
@@ -45,9 +45,11 @@ export default function HomePage() {
 
         {/* Bloque de texto derecho ajustado a la imagen */}
         <div className="flex-1 flex flex-col items-center text-center space-y-8 pt-6">
-          {/* Título: Solo KATZ en negrita, el resto normal */}
-          <h1 className="text-xl sm:text-2xl font-normal leading-relaxed text-gray-900">
-            <span className="font-bold">KATZ:</span> Empatía-Clown-Máscaras- Bufón- Oratoria- Teatro – Coaching.
+          {/* Título: KATZ arriba en negrita y las dos líneas de disciplinas/temas abajo */}
+          <h1 className="text-xl sm:text-2xl font-normal leading-snug text-gray-900 space-y-1">
+            <span className="font-bold block text-2xl sm:text-3xl">KATZ</span>
+            <span className="block uppercase tracking-wide">CLOWN - MÁSCARAS - BUFÓN</span>
+            <span className="block uppercase tracking-wide">LIDERAZGO - EMPATÍA - EXPRESIVIDAD - JUEGO</span>
           </h1>
 
           {/* Párrafo de intro: Más ligero y con buen aire */}
