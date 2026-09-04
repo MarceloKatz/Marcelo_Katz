@@ -230,20 +230,33 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             </div>
           </section>
 
-          {/* CARRUSEL DE IMÁGENES INTERACTIVO (Reemplazando imágenes viejas y barbijos por las nuevas 8.jpg y 9.jpg) */}
-          <section className="space-y-6">
+          {/* GALERÍA DEL ENTRENAMIENTO (2 FOTOS LADO A LADO) */}
+          <section className="space-y-6 pt-4">
             <h3 className="text-center text-xs font-bold tracking-[0.25em] text-[#7B61FF] uppercase">
               Galería del Entrenamiento
             </h3>
-            <ExpresividadCarousel
-              images={[
-                { src: "/images/coach/talleres-encuentros-1.jpg", alt: "Entrenamiento Expresividad y Empatía 1" },
-                { src: "/images/coach/talleres-encuentros-2.jpg", alt: "Entrenamiento Expresividad y Empatía 2" },
-                { src: "/images/coach/coach-1.jpg", alt: "Taller Expresividad y Empatía 3" },
-                { src: "/images/coach/coach-2.jpg", alt: "Taller Expresividad y Empatía 4" },
-              ]}
-            />
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <Image
+                  src="/images/coach/entrenamiento-1.jpg"
+                  alt="Galería del Entrenamiento 1"
+                  fill
+                  sizes="50vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <Image
+                  src="/images/coach/entrenamiento-2.jpg"
+                  alt="Galería del Entrenamiento 2"
+                  fill
+                  sizes="50vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
           </section>
+
 
           {/* Beneficios */}
           <section className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-100 space-y-6">
