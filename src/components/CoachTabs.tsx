@@ -159,7 +159,7 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                 <Image
-                  src="/images/coach/j-s-c-abril-26-4.jpg"
+                  src="/images/coach/talleres-encuentros-1.jpg"
                   alt="Galería Taller Juego, Salud y Crecimiento 1"
                   fill
                   sizes="50vw"
@@ -168,7 +168,7 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
               </div>
               <div className="relative w-full h-[280px] sm:h-[360px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                 <Image
-                  src="/images/coach/coach-2.jpg"
+                  src="/images/coach/talleres-encuentros-2.jpg"
                   alt="Galería Taller Juego, Salud y Crecimiento 2"
                   fill
                   sizes="50vw"
@@ -237,9 +237,9 @@ export default function CoachTabs({ expresividadData }: CoachTabsProps) {
             </h3>
             <ExpresividadCarousel
               images={[
-                { src: "/images/coach/j-s-c-abril-26-8.jpg", alt: "Entrenamiento Expresividad y Empatía 1" },
-                { src: "/images/coach/j-s-c-abril-26-9.jpg", alt: "Entrenamiento Expresividad y Empatía 2" },
-                { src: "/images/coach/j-s-c-abril-26-4.jpg", alt: "Taller Expresividad y Empatía 3" },
+                { src: "/images/coach/talleres-encuentros-1.jpg", alt: "Entrenamiento Expresividad y Empatía 1" },
+                { src: "/images/coach/talleres-encuentros-2.jpg", alt: "Entrenamiento Expresividad y Empatía 2" },
+                { src: "/images/coach/coach-1.jpg", alt: "Taller Expresividad y Empatía 3" },
                 { src: "/images/coach/coach-2.jpg", alt: "Taller Expresividad y Empatía 4" },
               ]}
             />
