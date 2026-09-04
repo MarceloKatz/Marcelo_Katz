@@ -34,9 +34,9 @@ function renderEventText(text: string) {
         href={match[2]}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[#9B88ED] hover:underline font-medium ml-1"
+        className="text-[#8570e8] underline underline-offset-2 hover:text-[#684ee3] font-semibold transition-colors"
       >
-        {match[1]}
+        {match[1]} ↗
       </a>
     );
     lastIndex = regex.lastIndex;
