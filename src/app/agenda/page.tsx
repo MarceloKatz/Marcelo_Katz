@@ -21,9 +21,9 @@ export default function AgendaPage() {
   const initialData = getInitialAgendaData();
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-      <header className="text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-wider text-gray-900 uppercase">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+      <header className="text-center max-w-2xl mx-auto">
+        <h1 className="text-2xl sm:text-3xl font-serif font-bold tracking-wider text-[#1e293b] uppercase leading-tight">
           AGENDA DE FUNCIONES Y ENTRENAMIENTOS
         </h1>
       </header>
@@ -33,4 +33,3 @@ export default function AgendaPage() {
     </div>
   );
 }
-

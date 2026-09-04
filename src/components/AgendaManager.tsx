@@ -34,9 +34,9 @@ function renderEventText(text: string) {
         href={match[2]}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 ml-2 text-xs font-bold uppercase tracking-wider text-white bg-[#7B61FF] hover:bg-[#6a52e6] px-3.5 py-1.5 rounded-md transition-all shadow-sm transform hover:scale-105"
+        className="text-[#9B88ED] hover:underline font-medium ml-1"
       >
-        🎟️ {match[1]}
+        {match[1]}
       </a>
     );
     lastIndex = regex.lastIndex;
@@ -187,22 +187,22 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
   // VISTA PÚBLICA (Para visitantes comunes en /agenda)
   if (!isAdminPage) {
     return (
-      <div className="space-y-12">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+      <div className="space-y-16">
+        <div className="grid md:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-start">
           {/* COLUMNA 1: FUNCIONES */}
-          <section className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-md">
-            <h2 className="text-xl sm:text-2xl text-center pb-4 border-b border-gray-100 font-bold tracking-widest uppercase text-gray-900 flex items-center justify-center gap-2">
-              <span>🎭</span> FUNCIONES
+          <section className="space-y-8">
+            <h2 className="text-center font-serif text-base sm:text-lg font-bold tracking-widest uppercase text-[#1e293b] pb-2 border-b border-gray-200">
+              FUNCIONES
             </h2>
             <div className="space-y-6">
-              {data.funciones.map((s) => (
-                <div key={s.mes} className="space-y-3">
-                  <h3 className="text-[#7B61FF] font-bold tracking-widest text-xs uppercase bg-[#7B61FF]/10 inline-block px-3 py-1 rounded-full">
+              {data.funciones.map((s, idx) => (
+                <div key={idx} className="flex items-start">
+                  <span className="w-24 sm:w-28 flex-shrink-0 text-[#9B88ED] font-bold tracking-wider text-xs uppercase pt-0.5 select-none">
                     {s.mes}
-                  </h3>
-                  <ul className="space-y-3 text-gray-800">
+                  </span>
+                  <ul className="flex-1 space-y-2 text-[#475569] text-xs sm:text-sm leading-relaxed">
                     {s.eventos.map((e, i) => (
-                      <li key={i} className="leading-relaxed font-normal text-sm sm:text-base bg-gray-50/80 p-4 rounded-xl border border-gray-100/80">
+                      <li key={i}>
                         {renderEventText(e)}
                       </li>
                     ))}
@@ -212,20 +212,20 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
             </div>
           </section>
 
-          {/* COLUMNA 2: CURSOS */}
-          <section className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-md">
-            <h2 className="text-xl sm:text-2xl text-center pb-4 border-b border-gray-100 font-bold tracking-widest uppercase text-gray-900 flex items-center justify-center gap-2">
-              <span>🎓</span> CURSOS
+          {/* COLUMNA 2: ENTRENAMIENTOS */}
+          <section className="space-y-8">
+            <h2 className="text-center font-serif text-base sm:text-lg font-bold tracking-widest uppercase text-[#1e293b] pb-2 border-b border-gray-200">
+              ENTRENAMIENTOS
             </h2>
             <div className="space-y-6">
-              {data.entrenamientos.map((s) => (
-                <div key={s.mes} className="space-y-3">
-                  <h3 className="text-[#7B61FF] font-bold tracking-widest text-xs uppercase bg-[#7B61FF]/10 inline-block px-3 py-1 rounded-full">
+              {data.entrenamientos.map((s, idx) => (
+                <div key={idx} className="flex items-start">
+                  <span className="w-24 sm:w-28 flex-shrink-0 text-[#9B88ED] font-bold tracking-wider text-xs uppercase pt-0.5 select-none">
                     {s.mes}
-                  </h3>
-                  <ul className="space-y-3 text-gray-800">
+                  </span>
+                  <ul className="flex-1 space-y-2 text-[#475569] text-xs sm:text-sm leading-relaxed">
                     {s.eventos.map((e, i) => (
-                      <li key={i} className="leading-relaxed font-normal text-sm sm:text-base bg-gray-50/80 p-4 rounded-xl border border-gray-100/80">
+                      <li key={i}>
                         {renderEventText(e)}
                       </li>
                     ))}
@@ -237,7 +237,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
         </div>
 
         {/* Enlace sutil al panel de administración en el pie */}
-        <div className="text-center pt-8 border-t border-gray-100">
+        <div className="text-center pt-12 border-t border-gray-100">
           <Link
             href="/admin/agenda"
             className="text-[11px] text-gray-400 hover:text-gray-600 transition-colors inline-flex items-center gap-1"
@@ -269,7 +269,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full text-sm border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#7B61FF]"
+              className="w-full text-sm border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#9B88ED]"
               autoFocus
             />
           </div>
@@ -280,7 +280,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
 
           <button
             type="submit"
-            className="w-full bg-[#7B61FF] hover:bg-[#684ee3] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-lg transition-all shadow-md"
+            className="w-full bg-[#9B88ED] hover:bg-[#8570e8] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-lg transition-all shadow-md"
           >
             Ingresar al Editor
           </button>
@@ -311,7 +311,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
           <button
             onClick={handleSave}
             disabled={isSaving}
-            className="bg-[#7B61FF] hover:bg-[#684ee3] text-white text-xs font-bold tracking-wider px-5 py-2.5 rounded-lg transition-all shadow-md flex items-center gap-2"
+            className="bg-[#9B88ED] hover:bg-[#8570e8] text-white text-xs font-bold tracking-wider px-5 py-2.5 rounded-lg transition-all shadow-md flex items-center gap-2"
           >
             {isSaving ? "Guardando..." : "💾 Guardar Cambios"}
           </button>
@@ -363,7 +363,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
                     value={sec.mes}
                     onChange={(e) => handleUpdateFuncionesMes(secIdx, e.target.value)}
                     placeholder="MES (ej: OCTUBRE)"
-                    className="font-bold text-sm text-[#7B61FF] tracking-widest bg-white border border-gray-300 rounded px-3 py-1.5 w-48 uppercase"
+                    className="font-bold text-sm text-[#9B88ED] tracking-widest bg-white border border-gray-300 rounded px-3 py-1.5 w-48 uppercase"
                   />
                   <button
                     onClick={() => handleDeleteFuncionesMes(secIdx)}
@@ -393,7 +393,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
                   ))}
                   <button
                     onClick={() => handleAddFuncionesEvento(secIdx)}
-                    className="text-xs font-semibold text-[#7B61FF] hover:underline pt-1 block"
+                    className="text-xs font-semibold text-[#9B88ED] hover:underline pt-1 block"
                   >
                     + Agregar fecha / función en {sec.mes}
                   </button>
@@ -426,7 +426,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
                     value={sec.mes}
                     onChange={(e) => handleUpdateEntrenamientosMes(secIdx, e.target.value)}
                     placeholder="MES (ej: NOVIEMBRE)"
-                    className="font-bold text-sm text-[#7B61FF] tracking-widest bg-white border border-gray-300 rounded px-3 py-1.5 w-48 uppercase"
+                    className="font-bold text-sm text-[#9B88ED] tracking-widest bg-white border border-gray-300 rounded px-3 py-1.5 w-48 uppercase"
                   />
                   <button
                     onClick={() => handleDeleteEntrenamientosMes(secIdx)}
@@ -456,7 +456,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
                   ))}
                   <button
                     onClick={() => handleAddEntrenamientosEvento(secIdx)}
-                    className="text-xs font-semibold text-[#7B61FF] hover:underline pt-1 block"
+                    className="text-xs font-semibold text-[#9B88ED] hover:underline pt-1 block"
                   >
                     + Agregar entrenamiento en {sec.mes}
                   </button>
@@ -470,7 +470,7 @@ export default function AgendaManager({ initialData, isAdminPage = false }: Agen
           <button
             onClick={handleSave}
             disabled={isSaving}
-            className="bg-[#7B61FF] hover:bg-[#684ee3] text-white text-sm font-bold tracking-wider px-8 py-3 rounded-xl transition-all shadow-lg"
+            className="bg-[#9B88ED] hover:bg-[#8570e8] text-white text-sm font-bold tracking-wider px-8 py-3 rounded-xl transition-all shadow-lg"
           >
             {isSaving ? "Guardando..." : "💾 Guardar Todos los Cambios"}
           </button>

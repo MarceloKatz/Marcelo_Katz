@@ -1,41 +1,61 @@
 {
   "funciones": [
     {
+      "mes": "JUNIO",
+      "eventos": [
+        "Sabado 20 de Junio, Teatro Del Pueblo - VACA MUERTA. (Modificado 2)",
+        "Sabado 27 de Junio, Teatro Del Pueblo - VACA MUERTA. (Modificado)"
+      ]
+    },
+    {
+      "mes": "JULIO",
+      "eventos": [
+        "Sábados a las 19h, Teatro Del Pueblo (Lavalle 3636) — VACA MUERTA."
+      ]
+    },
+    {
+      "mes": "AGOSTO",
+      "eventos": [
+        "Sábados a las 19h, Teatro Del Pueblo (Lavalle 3636) — VACA MUERTA.",
+        "Viernes 15 a domingo 17, Puerto Madryn (Argentina) — Gaspet."
+      ]
+    },
+    {
       "mes": "SEPTIEMBRE",
       "eventos": [
-        "VACA MUERTA — Sábados a las 19h, Teatro Del Pueblo (Lavalle 3636), Buenos Aires — [Entradas por Alternativa teatral](https://publico.alternativateatral.com/entradas101150-vaca-muerta?o=14)",
-        "GASPET — Viernes 18 de Septiembre a las 21h, Teatro Espacio Aguirre (Aguirre 1270), Buenos Aires — [Entradas por Alternativa teatral](https://www.alternativateatral.com/obra76918-gaspet)"
-      ]
-    },
-    {
-      "mes": "OCTUBRE",
-      "eventos": [
-        "GASPET — Sábado 17 de Octubre — Madrid, España."
-      ]
-    },
-    {
-      "mes": "ENERO / FEBRERO 2027",
-      "eventos": [
-        "GASPET — Enero/febrero 2027 — Ciudad de México, Puebla, Monterrey y Guadalajara, México."
+        "Viernes 5 a domingo 7, Montevideo (Uruguay) — Gaspet."
       ]
     }
   ],
   "entrenamientos": [
     {
-      "mes": "SEPTIEMBRE",
+      "mes": "MARZO",
       "eventos": [
-        "CLOWN — Viernes 4 a domingo 6 de Septiembre en Montevideo, Uruguay."
+        "Viernes 21 al domingo 23, Ciudad de Córdoba (Argentina) — Curso de Clown."
       ]
     },
     {
-      "mes": "OCTUBRE",
+      "mes": "MAYO",
       "eventos": [
-        "BUFÓN — Viernes 2 a domingo 4 de Octubre en Pamplona, España.",
-        "CLOWN — Lunes 5 a jueves 8 de Octubre en Vigo, España.",
-        "CLOWN — Sábado 10 y Domingo 11 de Octubre en Gambara, País vasco.",
-        "CLOWN — Lunes 12 a jueves 15 de Octubre en Gijón, España.",
-        "CLOWN — Sábado 17 y Domingo 18 de Octubre en Madrid, España.",
-        "CLOWN — Lunes 19 a Domingo 25 de Octubre en París, Francia."
+        "Viernes 2 al domingo 4, Barcelona (España) — Curso de Clown.",
+        "Viernes 9 al domingo 11, Palma de Mallorca (España) — Curso de Clown.",
+        "Lunes 12 a jueves 15, Gijón (España) — Curso de Clown.",
+        "Viernes 16 a jueves 22, Valencia (España) — Curso de Clown.",
+        "Viernes 23 a domingo 25, Pamplona (España) — Curso de Clown.",
+        "Miércoles 28 y jueves 29, San Sebastián (España) — Curso de Clown.",
+        "Viernes 30 a domingo 1/6, Ganbara (País Vasco) — Curso de Clown."
+      ]
+    },
+    {
+      "mes": "JUNIO",
+      "eventos": [
+        "Viernes 6 a domingo 8, Santiago de Compostela (España) — Curso de Clown."
+      ]
+    },
+    {
+      "mes": "AGOSTO",
+      "eventos": [
+        "Viernes 15 a domingo 17, Puerto Madryn (Argentina) — Curso de Clown."
       ]
     }
   ]
