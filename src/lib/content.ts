@@ -245,7 +245,7 @@ export const AGENDA = {
       mes: "SEPTIEMBRE",
       eventos: [
         "VACA MUERTA — Sábados a las 19h, Teatro Del Pueblo (Lavalle 3636), Buenos Aires — [Entradas por Alternativa teatral](https://publico.alternativateatral.com/entradas101150-vaca-muerta?o=14)",
-        "GASPET — Viernes 18 de Septiembre a las 21h, Teatro Espacio Aguirre (Aguirre 1270), Buenos Aires — [Entradas por Alternativa teatral](https://www.alternativateatral.com/obra76918-gaspet)"
+        "GASPET — Viernes 18 de Septiembre a las 21h, Teatro Espacio Aguirre (Aguirre 1270), Buenos Aires — [Entradas por Alternativa teatral](https://publico.alternativateatral.com/entradas77359-gaspet?o=14)"
       ]
     },
     {
